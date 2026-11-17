@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English en famille</title>
+<meta name="theme-color" content="#C94F2C">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<style id="css">
+:root{--ink:#1F2A44;--muted:#4A5468;--paper:#FFFDF7;--sand:#F3EEE2;--line:#E5DCC8;--coral:#C94F2C;--sun:#F2B33D;--sunInk:#8A5A00;--teal:#217A70;--blue:#2F5D9E}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--paper);color:var(--ink);font-family:Nunito,system-ui,sans-serif;-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;cursor:pointer}
+h1,h2,h3,.fred{font-family:Fredoka,Nunito,sans-serif;font-weight:600;margin:0}
+#root{max-width:560px;margin:0 auto;min-height:100vh;display:flex;flex-direction:column}
+.top{padding:18px 18px 8px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.top h1{font-size:26px;color:var(--coral)}
+.top .sub{font-size:13px;color:var(--muted);font-weight:700}
+main{flex:1;padding:8px 16px 110px;display:flex;flex-direction:column;gap:14px}
+.card{background:#fff;border:2px solid var(--line);border-radius:18px;padding:16px}
+.card.c-coral{border-color:var(--coral)}.card.c-teal{border-color:var(--teal)}.card.c-blue{border-color:var(--blue)}.card.c-sun{border-color:#E0A12E}
+.band{margin:-16px -16px 12px;padding:12px 16px;border-radius:16px 16px 0 0;color:#fff}
+.band.coral{background:var(--coral)}.band.teal{background:var(--teal)}.band.blue{background:var(--blue)}.band.sun{background:var(--sun);color:var(--ink)}
+.band .d{font-family:Fredoka,sans-serif;font-size:28px;font-weight:600;line-height:1.1}
+.band .f{font-size:14px;font-weight:700}
+.label{font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.row{display:flex;align-items:center;gap:10px}
+.between{justify-content:space-between}
+.phrase{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;background:var(--sand);border-radius:12px;border:0;width:100%;text-align:left;font-size:16px;font-weight:700;min-height:48px}
+.phrase .fr{display:block;font-size:13px;font-weight:600;color:var(--muted)}
+.spk{flex-shrink:0;width:36px;height:36px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:17px}
+.stack{display:flex;flex-direction:column;gap:8px}
+.check{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border:2px solid var(--line);border-radius:12px;background:#fff;text-align:left;font-size:15px;font-weight:700;min-height:52px}
+.check .box{width:26px;height:26px;border-radius:8px;border:2px solid var(--ink);display:grid;place-items:center;flex-shrink:0;font-size:16px}
+.check.on{border-color:var(--teal);background:#EAF5F3}.check.on .box{background:var(--teal);border-color:var(--teal);color:#fff}
+.btn{border:0;border-radius:14px;padding:13px 18px;font-weight:800;font-size:15px;background:var(--ink);color:#fff;min-height:48px}
+.btn.coral{background:var(--coral)}.btn.teal{background:var(--teal)}.btn.blue{background:var(--blue)}.btn.sun{background:var(--sun);color:var(--ink)}
+.btn.ghost{background:var(--sand);color:var(--ink)}
+.btn.full{width:100%}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:2px 2px 6px;margin:0 -16px;padding-left:16px;padding-right:16px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex-shrink:0;border:2px solid var(--line);background:#fff;border-radius:999px;padding:8px 14px;font-weight:800;font-size:14px;min-height:40px}
+.chip.on{background:var(--ink);border-color:var(--ink);color:#fff}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.pic{border:2px solid var(--line);background:#fff;border-radius:18px;padding:14px 8px;display:flex;flex-direction:column;align-items:center;gap:4px;min-height:132px;justify-content:center}
+.pic:active{transform:scale(.96)}
+.emo{font-size:52px;line-height:1}
+.swatch{width:54px;height:54px;border-radius:50%;border:2px solid var(--ink)}
+.pic .w{font-family:Fredoka,sans-serif;font-size:22px;font-weight:600}
+.pic .fr{font-size:13px;color:var(--muted);font-weight:700}
+.mem{aspect-ratio:3/4;border-radius:14px;border:0;display:grid;place-items:center;background:var(--blue);color:#fff;font-family:Fredoka,sans-serif;font-size:30px;padding:4px}
+.mem.up{background:#fff;border:2px solid var(--blue);color:var(--ink)}
+.mem.done{background:#EAF5F3;border:2px solid var(--teal);opacity:.75}
+.mem .emo{font-size:40px}.mem .swatch{width:40px;height:40px}
+.mem .txt{font-size:18px;word-break:break-word}
+.game-tile{display:flex;align-items:center;gap:14px;width:100%;text-align:left;border:2px solid var(--line);background:#fff;border-radius:18px;padding:14px;min-height:76px}
+.game-tile .ic{font-size:34px;width:52px;height:52px;border-radius:14px;display:grid;place-items:center;flex-shrink:0}
+.game-tile b{font-family:Fredoka,sans-serif;font-size:20px;font-weight:600;display:block}
+.game-tile span{font-size:13px;color:var(--muted);font-weight:700}
+.slot{border:2px dashed var(--ink);border-radius:18px;min-height:110px;display:grid;place-items:center;font-family:Fredoka,sans-serif;font-size:42px;color:var(--muted)}
+.big-prompt{font-family:Fredoka,sans-serif;font-size:26px;font-weight:600;text-align:center}
+.ok{background:#EAF5F3;border-color:var(--teal)!important}
+.ko{animation:shake .35s;border-color:var(--coral)!important}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.cover{min-height:260px;display:grid;place-items:center;background:var(--ink);color:#fff;border-radius:18px;font-family:Fredoka,sans-serif;font-size:28px;text-align:center;padding:20px}
+.stars{display:grid;grid-template-columns:88px repeat(7,minmax(0,1fr));gap:4px;align-items:center}
+.stars .h{text-align:center;font-size:12px;font-weight:800;color:var(--muted);padding:4px 0;border-radius:8px}
+.stars .h.today{background:var(--ink);color:#fff}
+.stars .who{font-weight:800;font-size:14px;line-height:1.15;padding-left:8px;border-left:6px solid;min-height:44px;display:flex;flex-direction:column;justify-content:center;overflow:hidden}
+.stars .who small{font-weight:700;color:var(--muted);font-size:12px}
+.star{border:0;background:transparent;aspect-ratio:1;min-height:40px;border-radius:10px;display:grid;place-items:center;padding:0}
+.star.today{background:var(--sand)}
+.star svg{width:80%;height:80%}
+.bar{height:16px;border-radius:999px;background:var(--sand);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--sun);border-radius:999px;transition:width .3s}
+.total{font-family:Fredoka,sans-serif;font-size:44px;font-weight:600;line-height:1}
+nav{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:2px solid var(--line);padding-bottom:env(safe-area-inset-bottom)}
+nav .in{max-width:560px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr)}
+nav button{border:0;background:none;padding:8px 2px 10px;display:flex;flex-direction:column;align-items:center;gap:2px;font-size:12px;font-weight:800;color:var(--muted);min-height:60px}
+nav button .i{font-size:22px;filter:grayscale(1);opacity:.6}
+nav button.on{color:var(--ink)}nav button.on .i{filter:none;opacity:1}
+.toast{position:fixed;left:50%;bottom:86px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:12px;font-weight:700;font-size:14px;z-index:30;max-width:90vw;text-align:center}
+.modal-bg{position:fixed;inset:0;background:rgba(31,42,68,.55);display:grid;place-items:center;z-index:20;padding:16px}
+.modal{background:#fff;border-radius:20px;padding:20px;width:100%;max-width:420px;display:flex;flex-direction:column;gap:12px;max-height:90vh;overflow:auto}
+.field{display:flex;flex-direction:column;gap:4px;font-weight:800;font-size:13px}
+.field input{font:inherit;font-size:16px;padding:10px 12px;border:2px solid var(--line);border-radius:12px;font-weight:600}
+details{background:#fff;border:2px solid var(--line);border-radius:18px;padding:12px 16px}
+details summary{font-family:Fredoka,sans-serif;font-size:19px;font-weight:600;cursor:pointer;min-height:32px;display:flex;align-items:center}
+details[open] summary{margin-bottom:10px}
+.banner{background:#FFF4D6;border:2px solid #E0A12E;border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:10px}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script id="state" type="application/json">{"rev":0,"week":"2026-W47","theme":0,"goal":20,"reward":"Soirée pizza-film en VO","people":[{"id":"p0","name":"Maman","color":"#C94F2C"},{"id":"p1","name":"Papa","color":"#2F5D9E"},{"id":"p2","name":"Aîné(e)","color":"#217A70"},{"id":"p3","name":"Petit(e)","color":"#E0A12E"}],"stars":{"p0":[0,0,0,0,0,0,0],"p1":[0,0,0,0,0,0,0],"p2":[0,0,0,0,0,0,0],"p3":[0,0,0,0,0,0,0]},"history":[],"named":false}</script>
+<script id="app">
+(function(){
+'use strict';
+var FONT='https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600&amp;family=Nunito:wght@400;600;700;800&amp;display=swap';
+
+var THEMES=[
+{en:'Colours',fr:'Les couleurs',art:false,items:[{w:'red',fr:'rouge',c:'#D93A2B'},{w:'blue',fr:'bleu',c:'#2F6FD0'},{w:'yellow',fr:'jaune',c:'#F5C518'},{w:'green',fr:'vert',c:'#2E9E4F'},{w:'pink',fr:'rose',c:'#F28AB8'},{w:'orange',fr:'orange',c:'#F28C28'},{w:'black',fr:'noir',c:'#1F1F1F'},{w:'white',fr:'blanc',c:'#FFFFFF'}]},
+{en:'Animals',fr:'Les animaux',art:true,items:[{w:'cat',fr:'chat',e:'🐱'},{w:'dog',fr:'chien',e:'🐶'},{w:'bird',fr:'oiseau',e:'🐦'},{w:'fish',fr:'poisson',e:'🐟'},{w:'horse',fr:'cheval',e:'🐴'},{w:'cow',fr:'vache',e:'🐮'},{w:'rabbit',fr:'lapin',e:'🐰'},{w:'pig',fr:'cochon',e:'🐷'}]},
+{en:'Food',fr:'La nourriture',art:true,items:[{w:'bread',fr:'pain',e:'🍞'},{w:'milk',fr:'lait',e:'🥛'},{w:'apple',fr:'pomme',e:'🍎'},{w:'banana',fr:'banane',e:'🍌'},{w:'cheese',fr:'fromage',e:'🧀'},{w:'cake',fr:'gâteau',e:'🍰'},{w:'pasta',fr:'pâtes',e:'🍝'},{w:'egg',fr:'œuf',e:'🥚'}]},
+{en:'My body',fr:'Le corps',art:true,items:[{w:'eyes',fr:'yeux',e:'👀'},{w:'nose',fr:'nez',e:'👃'},{w:'mouth',fr:'bouche',e:'👄'},{w:'ear',fr:'oreille',e:'👂'},{w:'hand',fr:'main',e:'✋'},{w:'foot',fr:'pied',e:'🦶'},{w:'leg',fr:'jambe',e:'🦵'},{w:'tooth',fr:'dent',e:'🦷'}]},
+{en:'Family',fr:'La famille',art:false,items:[{w:'mum',fr:'maman',e:'👩'},{w:'dad',fr:'papa',e:'👨'},{w:'brother',fr:'frère',e:'👦'},{w:'sister',fr:'sœur',e:'👧'},{w:'baby',fr:'bébé',e:'👶'},{w:'grandma',fr:'mamie',e:'👵'},{w:'grandpa',fr:'papi',e:'👴'},{w:'family',fr:'famille',e:'👪'}]},
+{en:'Clothes',fr:'Les vêtements',art:true,items:[{w:'shoes',fr:'chaussures',e:'👟'},{w:'hat',fr:'casquette',e:'🧢'},{w:'coat',fr:'manteau',e:'🧥'},{w:'T-shirt',fr:'tee-shirt',e:'👕'},{w:'socks',fr:'chaussettes',e:'🧦'},{w:'trousers',fr:'pantalon',e:'👖'},{w:'dress',fr:'robe',e:'👗'},{w:'scarf',fr:'écharpe',e:'🧣'}]},
+{en:'Weather',fr:'La météo',art:false,items:[{w:'sunny',fr:'ensoleillé',e:'☀️'},{w:'rainy',fr:'pluvieux',e:'🌧️'},{w:'windy',fr:'venteux',e:'🌬️'},{w:'cloudy',fr:'nuageux',e:'☁️'},{w:'snowy',fr:'neigeux',e:'❄️'},{w:'stormy',fr:'orageux',e:'⛈️'},{w:'rainbow',fr:'arc-en-ciel',e:'🌈'},{w:'cold',fr:'froid',e:'🥶'}]},
+{en:'My house',fr:'La maison',art:true,items:[{w:'house',fr:'maison',e:'🏠'},{w:'door',fr:'porte',e:'🚪'},{w:'window',fr:'fenêtre',e:'🪟'},{w:'chair',fr:'chaise',e:'🪑'},{w:'bed',fr:'lit',e:'🛏️'},{w:'bath',fr:'baignoire',e:'🛁'},{w:'key',fr:'clé',e:'🔑'},{w:'lamp',fr:'lampe',e:'💡'}]}
+];
+
+var DAYS=[
+{en:'Monday',fr:'Lundi',short:'Lun',c:'coral',t:'Nouveau thème',d:'On choisit le thème de la semaine et on colle des post-its sur les objets de la maison.',p:[['What is this?','Qu’est-ce que c’est ?'],['This is a cat!','C’est un chat !'],['Show me the door!','Montre-moi la porte !']]},
+{en:'Tuesday',fr:'Mardi',short:'Mar',c:'sun',t:'Simon says',d:'5 minutes de consignes à mimer. Parfait pour le petit de 3 ans.',p:[['Simon says jump!','Jacques a dit : saute !'],['Simon says touch your nose!','Touche ton nez !'],['Clap your hands!','Tape dans tes mains !'],['Sit down!','Assieds-toi !']]},
+{en:'Wednesday',fr:'Mercredi',short:'Mer',c:'teal',t:'Teacher time',d:'L’aîné(e) apprend 5 mots aux parents, avec ce qu’il ou elle voit à l’école.',p:[['Repeat after me!','Répète après moi !'],['How do you say chat in English?','Comment on dit chat en anglais ?'],['Good job!','Bravo !']]},
+{en:'Thursday',fr:'Jeudi',short:'Jeu',c:'blue',t:'I spy / Memory',d:'Un jeu rapide avec les mots du thème (onglet Jeux).',p:[['I spy with my little eye something red!','J’espionne quelque chose de rouge !'],['Is it the ball?','C’est le ballon ?'],['Yes! / No, try again!','Oui ! / Non, essaie encore !']]},
+{en:'Friday',fr:'Vendredi',short:'Ven',c:'coral',t:'English dinner',d:'Le repas se passe en anglais. Mimer est autorisé, se moquer est interdit.',p:[['Can I have some bread, please?','Je peux avoir du pain ?'],['Pass the water, please.','Passe l’eau, s’il te plaît.'],['It’s yummy!','C’est bon !'],['I’m full!','J’ai bien mangé !']]},
+{en:'Saturday',fr:'Samedi',short:'Sam',c:'sun',t:'Game time',d:'Un jeu de société en anglais : 7 familles (Go Fish), Qui est-ce ?…',p:[['Your turn! / My turn!','À toi ! / À moi !'],['Do you have the dad?','Tu as le papa ?'],['No, go fish!','Non, pioche !']]},
+{en:'Sunday',fr:'Dimanche',short:'Dim',c:'teal',t:'Movie & stars',d:'Un film en VO en famille, puis on compte les étoiles de la semaine.',p:[['Let’s watch a movie!','On regarde un film !'],['How many stars?','Combien d’étoiles ?'],['Well done, team!','Bravo l’équipe !']]}
+];
+
+var EVERYDAY=[
+{k:'bf',t:'Petit-déj en anglais',s:'Good morning! How are you?'},
+{k:'car',t:'Une chanson en anglais',s:'En voiture ou à la maison'},
+{k:'tv',t:'Dessin animé en VO',s:'Bluey, Peppa Pig, Puffin Rock…'},
+{k:'bed',t:'Histoire du soir',s:'Good night! Sweet dreams!'}
+];
+var MORNING=[['Good morning!','Bonjour !'],['How are you?','Comment ça va ?'],['I’m fine, thank you!','Ça va bien, merci !'],['What’s the weather like?','Quel temps fait-il ?'],['It’s sunny! / It’s raining!','Il fait beau ! / Il pleut !']];
+var NIGHT=[['Time for bed!','Au lit !'],['Brush your teeth!','Brosse-toi les dents !'],['Good night!','Bonne nuit !'],['Sweet dreams!','Fais de beaux rêves !'],['I love you!','Je t’aime !']];
+var MAGIC=[['Please / Thank you','S’il te plaît / Merci'],['Can I have…, please?','Est-ce que je peux avoir… ?'],['Where is my…?','Où est mon / ma… ?'],['I like… / I don’t like…','J’aime… / Je n’aime pas…'],['Let’s go!','On y va !'],['Time to eat!','À table !'],['Well done! / Great job!','Bravo !'],['I’m sorry.','Pardon.'],['Help me, please!','Aide-moi, s’il te plaît !']];
+var REAL=[
+{t:'Simon says',a:'dès 3 ans',d:'On fait le geste seulement si la consigne commence par « Simon says ».',p:['Simon says touch your nose!','Clap your hands!']},
+{t:'I spy',a:'dès 3 ans',d:'On choisit un objet de la pièce et on donne sa couleur. Les autres devinent.',p:['I spy with my little eye something blue!']},
+{t:'Go Fish',a:'CM1 + parents',d:'Le jeu des 7 familles en anglais. Le petit joue en équipe avec un adulte.',p:['Do you have the dad?','Yes, here you are!','No, go fish!']},
+{t:'Guess who?',a:'CM1 + parents',d:'Qui est-ce ?, avec les questions en anglais.',p:['Has he got glasses?','Is she wearing a hat?']},
+{t:'Hide and seek',a:'tout le monde',d:'Cache-cache en comptant jusqu’à 20 en anglais.',p:['One, two, three… twenty!','Ready or not, here I come!']}
+];
+
+// ---------- state ----------
+var DEFAULT={rev:0,week:'',theme:0,goal:20,reward:'',people:[],stars:{},history:[],named:false};
+var S=DEFAULT;
+try{S=Object.assign({},DEFAULT,JSON.parse(document.getElementById('state').textContent))}catch(e){}
+try{var loc=JSON.parse(localStorage.getItem('elf-state')||'null');if(loc&&(loc.rev||0)>(S.rev||0))S=Object.assign({},DEFAULT,loc)}catch(e){}
+S.people.forEach(function(p){if(!S.stars[p.id])S.stars[p.id]=[0,0,0,0,0,0,0]});
+
+function useCap(n){try{if(window.claude&&typeof window.claude.use==='function')return Promise.resolve(window.claude.use(n)).catch(function(){return null})}catch(e){}return Promise.resolve(null)}
+var ART=null,canPublish=true,TTS=null,pubTimer=null;
+useCap('artifact').then(function(a){ART=a});
+useCap('tts').then(function(t){TTS=t;render()});
+
+function saveLocal(){try{localStorage.setItem('elf-state',JSON.stringify(S))}catch(e){}}
+function persist(){S.rev=(S.rev||0)+1;saveLocal();if(ART&&canPublish){clearTimeout(pubTimer);pubTimer=setTimeout(doPublish,1800)}}
+function doPublish(){
+  if(!ART||!canPublish)return;
+  Promise.resolve().then(function(){return ART.publish(buildDoc())}).catch(function(e){
+    var c=e&&(e.code||e.message||'');
+    if(/not_granted|not_writer/.test(c)){canPublish=false;toast('Lecture seule : les étoiles restent sur cet appareil')}
+  });
+}
+function buildDoc(){
+  var css=document.getElementById('css').textContent;
+  var app=document.getElementById('app').textContent;
+  var json=JSON.stringify(S).replace(/</g,'\\u003c');
+  var sc='script';
+  return '<!DOCTYPE html>\n<html lang="fr">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>English en famille</title>\n<link rel="preconnect" href="https://fonts.googleapis.com">\n<link href="'+FONT+'" rel="stylesheet">\n<style id="css">'+css+'</style>\n</head>\n<body>\n<div id="root"></div>\n<'+sc+' id="state" type="application/json">'+json+'</'+sc+'>\n<'+sc+' id="app">'+app+'</'+sc+'>\n</body>\n</html>\n';
+}
+
+// ---------- helpers ----------
+function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function shuffle(a){a=a.slice();for(var i=a.length-1;i>0;i--){var j=Math.floor(Math.random()*(i+1));var t=a[i];a[i]=a[j];a[j]=t}return a}
+function todayIdx(){return (new Date().getDay()+6)%7}
+function isoWeek(dt){var d=new Date(Date.UTC(dt.getFullYear(),dt.getMonth(),dt.getDate()));var day=d.getUTCDay()||7;d.setUTCDate(d.getUTCDate()+4-day);var y=d.getUTCFullYear();var w=Math.ceil(((d-Date.UTC(y,0,1))/86400000+1)/7);return y+'-W'+(w<10?'0':'')+w}
+function mondayLabel(){var d=new Date();d.setDate(d.getDate()-todayIdx());return d.toLocaleDateString('fr-FR',{day:'numeric',month:'long'})}
+function dateKey(){var d=new Date();return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
+function hasAudio(){return !!TTS||('speechSynthesis' in window)}
+function pickVoice(){try{var vs=window.speechSynthesis.getVoices();return vs.filter(function(v){return /en[-_]GB/i.test(v.lang)})[0]||vs.filter(function(v){return /^en/i.test(v.lang)})[0]||null}catch(e){return null}}
+function fallbackSpeak(t){try{var s=window.speechSynthesis;if(!s)return;s.cancel();var u=new SpeechSynthesisUtterance(t);u.lang='en-GB';u.rate=0.85;var v=pickVoice();if(v)u.voice=v;s.speak(u)}catch(e){}}
+function speak(t){if(TTS){TTS.speak(t,{language:'en',rate:0.9}).catch(function(e){if(!e||e.code!=='viewer_stopped')fallbackSpeak(t)});return}fallbackSpeak(t)}
+try{if(window.speechSynthesis)window.speechSynthesis.onvoiceschanged=function(){}}catch(e){}
+function pic(it,cls){return it.c?'<span class="swatch" style="background:'+it.c+'" aria-hidden="true"></span>':'<span class="emo '+(cls||'')+'" aria-hidden="true">'+it.e+'</span>'}
+function spkBtn(){return hasAudio()?'<span class="spk" aria-hidden="true">🔊</span>':''}
+function phraseBtn(p){return '<button class="phrase" data-act="say" data-say="'+esc(p[0])+'"><span>'+esc(p[0])+(p[1]?'<span class="fr">'+esc(p[1])+'</span>':'')+'</span>'+spkBtn()+'</button>'}
+var toastTimer;function toast(m){var el=document.getElementById('toast');if(!el){el=document.createElement('div');el.id='toast';el.className='toast';el.setAttribute('role','status');document.body.appendChild(el)}el.textContent=m;el.style.display='block';clearTimeout(toastTimer);toastTimer=setTimeout(function(){el.style.display='none'},2600)}
+function starSvg(on,color){return '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3-4.6-4.4 6.3-.9z" fill="'+(on?color:'none')+'" stroke="'+(on?color:'#C9BFA8')+'" stroke-width="1.6" stroke-linejoin="round"/></svg>'}
+function familyTotal(){var t=0;S.people.forEach(function(p){(S.stars[p.id]||[]).forEach(function(v){t+=v?1:0})});return t}
+
+// ---------- view state ----------
+var TABS=[{id:'aujourdhui',l:'Aujourd’hui',i:'☀️'},{id:'mots',l:'Mots',i:'🔤'},{id:'jeux',l:'Jeux',i:'🎲'},{id:'etoiles',l:'Étoiles',i:'⭐'}];
+function curTab(){var h=(location.hash||'').replace('#','');return TABS.some(function(t){return t.id===h})?h:'aujourdhui'}
+var viewTheme=S.theme||0;var G=null;var modal=null;var revealWord=false;
+
+function daily(){try{return JSON.parse(localStorage.getItem('elf-daily-'+dateKey())||'{}')}catch(e){return{}}}
+function setDaily(o){try{localStorage.setItem('elf-daily-'+dateKey(),JSON.stringify(o))}catch(e){}}
+
+// ---------- renders ----------
+function rToday(){
+  var di=todayIdx(),D=DAYS[di],th=THEMES[S.theme||0],dl=daily(),done=EVERYDAY.filter(function(x){return dl[x.k]}).length;
+  var h='';
+  h+='<div class="row between"><div><div class="label">'+esc(new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}))+'</div></div><button class="chip" data-act="tab" data-tab="mots">Thème : '+esc(th.en)+' '+(th.items[0].e||'🎨')+'</button></div>';
+  h+='<div class="card c-'+D.c+'"><div class="band '+D.c+'"><div class="d">'+D.en+'</div><div class="f">'+D.fr+' · rituel du jour</div></div>';
+  h+='<h2 style="font-size:24px">'+esc(D.t)+'</h2><p style="margin:6px 0 12px;font-size:15px;line-height:1.45">'+esc(D.d)+'</p><div class="stack">'+D.p.map(phraseBtn).join('')+'</div>';
+  if(di===3)h+='<button class="btn blue full" style="margin-top:12px" data-act="tab" data-tab="jeux">Jouer au Memory</button>';
+  if(di===0)h+='<button class="btn coral full" style="margin-top:12px" data-act="tab" data-tab="mots">Choisir le thème de la semaine</button>';
+  if(di===6)h+='<button class="btn teal full" style="margin-top:12px" data-act="tab" data-tab="etoiles">Compter les étoiles</button>';
+  h+='</div>';
+  h+='<div class="card"><div class="row between" style="margin-bottom:10px"><h3 style="font-size:20px">Every day</h3><span class="label">'+done+' / 4</span></div><div class="stack">';
+  EVERYDAY.forEach(function(x){var on=!!dl[x.k];h+='<button class="check'+(on?' on':'')+'" data-act="daily" data-k="'+x.k+'" aria-pressed="'+on+'"><span class="box">'+(on?'✓':'')+'</span><span>'+esc(x.t)+'<span class="muted" style="display:block;font-size:13px;font-weight:600">'+esc(x.s)+'</span></span></button>'});
+  h+='</div><button class="btn sun full" style="margin-top:12px" data-act="allstar">⭐ On a fait de l’anglais aujourd’hui !</button></div>';
+  h+='<details><summary>Phrases du matin</summary><div class="stack">'+MORNING.map(phraseBtn).join('')+'</div></details>';
+  h+='<details><summary>Phrases du soir</summary><div class="stack">'+NIGHT.map(phraseBtn).join('')+'</div></details>';
+  return h;
+}
+
+function themeChips(act){return '<div class="chips">'+THEMES.map(function(t,i){return '<button class="chip'+(i===viewTheme?' on':'')+'" data-act="'+act+'" data-i="'+i+'">'+esc(t.en)+(i===(S.theme||0)?' ★':'')+'</button>'}).join('')+'</div>'}
+
+function rWords(){
+  var th=THEMES[viewTheme],isWeek=viewTheme===(S.theme||0);
+  var h=themeChips('vtheme');
+  h+='<div class="row between"><div><h2 style="font-size:26px">'+esc(th.en)+'</h2><div class="muted" style="font-weight:700;font-size:14px">'+esc(th.fr)+(hasAudio()?' · touchez une image pour l’écouter':'')+'</div></div>';
+  h+=isWeek?'<span class="label" style="color:var(--teal)">★ Cette semaine</span>':'<button class="btn ghost" data-act="settheme" style="padding:10px 12px;font-size:13px">★ Thème de la semaine</button>';
+  h+='</div><div class="grid2">';
+  th.items.forEach(function(it){h+='<button class="pic" data-act="say" data-say="'+esc(it.w)+'">'+pic(it)+'<span class="w">'+esc(it.w)+'</span><span class="fr">'+esc(it.fr)+'</span></button>'});
+  h+='</div><details><summary>Phrases magiques</summary><div class="stack">'+MAGIC.map(phraseBtn).join('')+'</div></details>';
+  return h;
+}
+
+function rGames(){
+  if(!G){
+    var h='<h2 style="font-size:24px">Jeux sur l’écran</h2>'+themeChips('vtheme');
+    h+='<div class="stack">';
+    h+='<button class="game-tile" data-act="g-memory" data-mode="pic"><span class="ic" style="background:#E8EEF8">🃏</span><span><b>Memory images</b><span>Retrouver les paires · dès 3 ans</span></span></button>';
+    h+='<button class="game-tile" data-act="g-memory" data-mode="word"><span class="ic" style="background:#E8EEF8">🔤</span><span><b>Memory image + mot</b><span>Associer l’image au mot écrit · CM1</span></span></button>';
+    h+='<button class="game-tile" data-act="g-missing"><span class="ic" style="background:#EAF5F3">🙈</span><span><b>What’s missing?</b><span>Quelle image a disparu ? · tout le monde</span></span></button>';
+    h+='<button class="game-tile" data-act="g-listen"><span class="ic" style="background:#FFF4D6">👂</span><span><b>Listen &amp; find</b><span>'+(hasAudio()?'Écouter le mot et toucher la bonne image':'Lire le mot et toucher la bonne image')+'</span></span></button>';
+    h+='</div><h2 style="font-size:24px;margin-top:6px">Jeux en vrai</h2><div class="stack">';
+    REAL.forEach(function(g){h+='<details><summary>'+esc(g.t)+'&nbsp;<span class="label" style="font-family:Nunito">· '+esc(g.a)+'</span></summary><p style="margin:0 0 10px;font-size:15px;line-height:1.45">'+esc(g.d)+'</p><div class="stack">'+g.p.map(function(x){return phraseBtn([x])}).join('')+'</div></details>'});
+    return h+'</div>';
+  }
+  var back='<div class="row between"><button class="btn ghost" data-act="g-back" style="padding:10px 14px">← Jeux</button><span class="label">'+esc(THEMES[viewTheme].en)+'</span></div>';
+  if(G.kind==='memory'){
+    var left=G.cards.filter(function(c){return !c.done}).length;
+    var h2=back+'<div class="row between"><h2 style="font-size:24px">Memory</h2><span class="label">Coups : '+G.moves+'</span></div>';
+    if(left===0)h2+='<div class="card c-teal" style="text-align:center"><div class="big-prompt">Well done!</div><p class="muted" style="font-weight:700">Toutes les paires en '+G.moves+' coups</p><button class="btn teal full" data-act="g-memory" data-mode="'+G.mode+'">Rejouer</button></div>';
+    h2+='<div class="grid3">';
+    G.cards.forEach(function(c){
+      var inner='?';
+      if(c.up||c.done)inner=c.type==='word'?'<span class="txt">'+esc(c.it.w)+'</span>':pic(c.it);
+      h2+='<button class="mem'+(c.done?' done':c.up?' up':'')+'" data-act="flip" data-id="'+c.id+'" aria-label="'+(c.up||c.done?esc(c.it.w):'Carte cachée')+'">'+inner+'</button>';
+    });
+    return h2+'</div>';
+  }
+  if(G.kind==='missing'){
+    var h3=back+'<h2 style="font-size:24px">What’s missing?</h2>';
+    if(G.phase==='look'){
+      h3+='<p class="muted" style="margin:0;font-weight:700">Regardez bien les images…</p><div class="grid2">'+G.items.map(function(it){return '<div class="pic">'+pic(it)+'<span class="w">'+esc(it.w)+'</span></div>'}).join('')+'</div><button class="btn blue full" data-act="m-close">Close your eyes! 🙈</button>';
+    }else if(G.phase==='closed'){
+      h3+='<div class="cover">Eyes closed… 🙈</div>';
+    }else{
+      h3+='<p class="big-prompt" style="margin:0">What’s missing?</p><div class="grid2">'+G.items.map(function(it,i){return i===G.hidden?'<div class="slot">?</div>':'<div class="pic">'+pic(it)+'<span class="w">'+esc(it.w)+'</span></div>'}).join('')+'</div>';
+      if(G.result==='ok'){h3+='<div class="card c-teal" style="text-align:center"><div class="big-prompt">Yes! '+esc(missingSentence(G.items[G.hidden]))+'</div><button class="btn teal full" style="margin-top:10px" data-act="g-missing">Encore !</button></div>'}
+      else{h3+='<div class="label">Touchez la réponse</div><div class="grid4">'+G.choices.map(function(it){var bad=G.wrong.indexOf(it.w)>=0;return '<button class="pic'+(bad?' ko':'')+'" style="min-height:96px;padding:8px 4px" data-act="m-pick" data-w="'+esc(it.w)+'">'+pic(it)+'<span class="fr" style="color:var(--ink)">'+esc(it.w)+'</span></button>'}).join('')+'</div>'}
+    }
+    return h3;
+  }
+  if(G.kind==='listen'){
+    var th=THEMES[viewTheme];var h4=back+'<div class="row between"><h2 style="font-size:24px">Listen &amp; find</h2><span class="label">⭐ '+G.score+'</span></div>';
+    var showWord=!hasAudio()||revealWord;
+    h4+='<div class="card" style="text-align:center"><div class="big-prompt">'+(showWord?esc(listenSentence(G.target,th)):'Écoutez…')+'</div><div class="row" style="justify-content:center;margin-top:10px;gap:8px">'+(hasAudio()?'<button class="btn sun" data-act="l-say">🔊 Réécouter</button><button class="btn ghost" data-act="l-reveal">'+(revealWord?'Cacher':'Voir')+' le mot</button>':'')+'</div></div>';
+    h4+='<div class="grid2">'+G.pool.map(function(it){var cls=G.result==='ok'&&it.w===G.target.w?' ok':G.wrong.indexOf(it.w)>=0?' ko':'';return '<button class="pic'+cls+'" data-act="l-pick" data-w="'+esc(it.w)+'" aria-label="'+esc(it.w)+'">'+pic(it)+'</button>'}).join('')+'</div>';
+    return h4;
+  }
+  return back;
+}
+function missingSentence(it){return 'The '+it.w+' is missing!'}
+function listenSentence(it,th){return th.art?'Show me the '+it.w+'!':'Show me '+it.w+'!'}
+
+function rStars(){
+  var cw=isoWeek(new Date()),ti=todayIdx(),tot=familyTotal(),goal=Math.max(1,S.goal||20),pct=Math.min(100,Math.round(tot*100/goal));
+  var h='';
+  if(S.week!==cw)h+='<div class="banner"><b>Nouvelle semaine !</b><span style="font-size:14px">Les étoiles de la semaine dernière ('+tot+') vont dans l’historique, et on repart à zéro.</span><button class="btn sun full" data-act="newweek">Commencer la semaine</button></div>';
+  else if(!S.named)h+='<div class="banner"><span style="font-size:14px;font-weight:700">Ajoutez les prénoms de la famille pour personnaliser le tableau.</span><button class="btn sun full" data-act="settings">Mettre les prénoms</button></div>';
+  h+='<div class="row between"><div><h2 style="font-size:26px">English Stars</h2><div class="muted" style="font-weight:700;font-size:14px">Semaine du '+esc(mondayLabel())+'</div></div><button class="btn ghost" data-act="settings" aria-label="Réglages" style="padding:10px 14px">⚙️ Réglages</button></div>';
+  h+='<div class="card" style="padding:12px 10px"><div class="stars"><div></div>';
+  DAYS.forEach(function(d,i){h+='<div class="h'+(i===ti?' today':'')+'">'+d.short+'</div>'});
+  S.people.forEach(function(p){
+    var arr=S.stars[p.id]||[],n=arr.filter(Boolean).length;
+    h+='<div class="who" style="border-color:'+p.color+'">'+esc(p.name)+'<small>'+n+' ⭐</small></div>';
+    arr.forEach(function(v,i){h+='<button class="star'+(i===ti?' today':'')+'" data-act="star" data-p="'+p.id+'" data-d="'+i+'" aria-pressed="'+(!!v)+'" aria-label="'+esc(p.name)+' '+DAYS[i].fr+'">'+starSvg(!!v,p.color)+'</button>'});
+  });
+  h+='</div></div>';
+  h+='<div class="card"><div class="row between"><div><div class="label">Total famille</div><div class="total">'+tot+' <span style="font-size:22px;color:var(--muted)">/ '+goal+'</span></div></div><div style="font-size:44px" aria-hidden="true">'+(tot>=goal?'🎉':'⭐')+'</div></div><div class="bar" style="margin:12px 0 10px" role="progressbar" aria-valuenow="'+tot+'" aria-valuemin="0" aria-valuemax="'+goal+'"><i style="width:'+pct+'%"></i></div>';
+  h+='<div style="font-size:15px;font-weight:700">'+(tot>=goal?'Objectif atteint ! Récompense : ':'Récompense : ')+esc(S.reward||'à choisir dans Réglages')+'</div></div>';
+  if(S.history&&S.history.length){h+='<details><summary>Semaines précédentes</summary><div class="stack">'+S.history.slice().reverse().map(function(x){return '<div class="row between" style="font-weight:700"><span>'+esc(x.label||x.week)+'</span><span>'+x.total+' ⭐</span></div>'}).join('')+'</div></details>'}
+  return h;
+}
+
+function rModal(){
+  if(!modal)return '';
+  if(modal.kind==='settings'){
+    var h='<div class="modal-bg"><form class="modal" id="setform"><h2 style="font-size:22px">Réglages</h2>';
+    S.people.forEach(function(p,i){h+='<label class="field">Membre '+(i+1)+'<input name="n'+i+'" value="'+esc(p.name)+'" maxlength="16"></label>'});
+    h+='<label class="field">Objectif d’étoiles pour la famille<input name="goal" type="number" min="1" max="99" value="'+(S.goal||20)+'"></label>';
+    h+='<label class="field">Récompense<input name="reward" value="'+esc(S.reward||'')+'" maxlength="60"></label>';
+    h+='<div class="row" style="justify-content:flex-end"><button type="button" class="btn ghost" data-act="close">Annuler</button><button type="submit" class="btn teal">Enregistrer</button></div></form></div>';
+    return h;
+  }
+  if(modal.kind==='confirm'){return '<div class="modal-bg"><div class="modal" role="dialog"><p style="margin:0;font-size:16px;font-weight:700">'+esc(modal.text)+'</p><div class="row" style="justify-content:flex-end"><button class="btn ghost" data-act="close">Annuler</button><button class="btn coral" data-act="confirm-yes">Oui</button></div></div></div>'}
+  return '';
+}
+
+var root=document.getElementById('root');
+function render(){
+  var t=curTab(),body=t==='mots'?rWords():t==='jeux'?rGames():t==='etoiles'?rStars():rToday();
+  root.innerHTML='<header class="top"><div><h1>English en famille</h1><div class="sub">10 minutes par jour, pour le plaisir</div></div></header><main>'+body+'</main><nav aria-label="Sections"><div class="in">'+TABS.map(function(x){return '<button class="'+(x.id===t?'on':'')+'" data-act="tab" data-tab="'+x.id+'"'+(x.id===t?' aria-current="page"':'')+'><span class="i" aria-hidden="true">'+x.i+'</span>'+esc(x.l)+'</button>'}).join('')+'</div></nav>'+rModal();
+}
+
+// ---------- games ----------
+function startMemory(mode){var items=shuffle(THEMES[viewTheme].items).slice(0,6),cards=[];items.forEach(function(it,i){cards.push({k:i,type:'pic',it:it});cards.push({k:i,type:mode==='word'?'word':'pic',it:it})});G={kind:'memory',mode:mode,cards:shuffle(cards).map(function(c,i){c.id=i;c.up=false;c.done=false;return c}),open:[],moves:0,lock:false}}
+function flip(id){
+  if(!G||G.lock)return;var c=G.cards[id];if(!c||c.up||c.done)return;
+  c.up=true;speak(c.it.w);G.open.push(c);
+  if(G.open.length===2){
+    G.moves++;var a=G.open[0],b=G.open[1];
+    if(a.k===b.k){a.done=b.done=true;a.up=b.up=false;G.open=[];if(G.cards.every(function(x){return x.done}))setTimeout(function(){speak('Well done!')},700)}
+    else{G.lock=true;setTimeout(function(){a.up=b.up=false;G.open=[];G.lock=false;render()},1100)}
+  }
+  render();
+}
+function startMissing(){var items=shuffle(THEMES[viewTheme].items).slice(0,4);G={kind:'missing',items:items,phase:'look',hidden:-1,choices:shuffle(items),wrong:[],result:null}}
+function startListen(){var keep=G&&G.kind==='listen'?G.score:0;var pool=shuffle(THEMES[viewTheme].items).slice(0,4);G={kind:'listen',pool:pool,target:pool[Math.floor(Math.random()*4)],wrong:[],result:null,score:keep};revealWord=false;setTimeout(function(){speak(listenSentence(G.target,THEMES[viewTheme]))},250)}
+
+// ---------- actions ----------
+var ACT={
+  tab:function(el){var t=el.dataset.tab;if(t!=='jeux')G=null;location.hash=t;render();window.scrollTo(0,0)},
+  say:function(el){speak(el.dataset.say)},
+  daily:function(el){var d=daily();d[el.dataset.k]=!d[el.dataset.k];setDaily(d);render()},
+  allstar:function(){if(S.week!==isoWeek(new Date())){location.hash='etoiles';render();return}var ti=todayIdx();S.people.forEach(function(p){S.stars[p.id][ti]=1});persist();speak('Well done, team!');toast('Une étoile pour tout le monde aujourd’hui !')},
+  vtheme:function(el){viewTheme=+el.dataset.i;G=null;render()},
+  settheme:function(){S.theme=viewTheme;persist();render();toast('Nouveau thème de la semaine : '+THEMES[viewTheme].en)},
+  star:function(el){var p=el.dataset.p,d=+el.dataset.d;if(!S.stars[p])return;S.stars[p][d]=S.stars[p][d]?0:1;persist();render()},
+  settings:function(){modal={kind:'settings'};render()},
+  close:function(){modal=null;render()},
+  newweek:function(){var tot=familyTotal();S.history=(S.history||[]).concat([{week:S.week,label:'Semaine '+String(S.week).split('-W')[1],total:tot}]).slice(-10);S.people.forEach(function(p){S.stars[p.id]=[0,0,0,0,0,0,0]});S.week=isoWeek(new Date());persist();render()},
+  'confirm-yes':function(){var f=modal&&modal.onYes;modal=null;if(f)f();render()},
+  'g-back':function(){G=null;render()},
+  'g-memory':function(el){startMemory(el.dataset.mode);render();window.scrollTo(0,0)},
+  'g-missing':function(){startMissing();render();window.scrollTo(0,0)},
+  'g-listen':function(){startListen();render();window.scrollTo(0,0)},
+  flip:function(el){flip(+el.dataset.id)},
+  'm-close':function(){G.phase='closed';speak('Close your eyes!');render();setTimeout(function(){if(!G||G.kind!=='missing')return;G.hidden=Math.floor(Math.random()*G.items.length);G.phase='guess';render();speak('Open your eyes! What’s missing?')},2200)},
+  'm-pick':function(el){if(!G||G.result)return;var w=el.dataset.w,it=G.items[G.hidden];if(w===it.w){G.result='ok';speak('Yes! '+missingSentence(it))}else{if(G.wrong.indexOf(w)<0)G.wrong.push(w);speak('No, try again!')}render()},
+  'l-say':function(){speak(listenSentence(G.target,THEMES[viewTheme]))},
+  'l-reveal':function(){revealWord=!revealWord;render()},
+  'l-pick':function(el){if(!G||G.result)return;var w=el.dataset.w;if(w===G.target.w){G.result='ok';G.score++;speak('Yes! Well done!');render();setTimeout(function(){if(G&&G.kind==='listen'){startListen();render()}},1500)}else{if(G.wrong.indexOf(w)<0)G.wrong.push(w);speak('No, try again!');render()}}
+};
+root.addEventListener('click',function(e){var el=e.target.closest('[data-act]');if(!el)return;if(el.tagName==='BUTTON'&&el.type==='submit')return;var f=ACT[el.dataset.act];if(f){e.preventDefault();f(el)}});
+root.addEventListener('submit',function(e){
+  e.preventDefault();var f=e.target;if(f.id!=='setform')return;
+  S.people.forEach(function(p,i){var v=(f.elements['n'+i].value||'').trim();if(v)p.name=v.slice(0,16)});
+  var g=parseInt(f.elements.goal.value,10);if(g>0&&g<100)S.goal=g;
+  S.reward=(f.elements.reward.value||'').trim().slice(0,60);S.named=true;
+  modal=null;persist();render();toast('Réglages enregistrés');
+});
+window.addEventListener('hashchange',function(){if(curTab()!=='jeux')G=null;render()});
+render();
+})();
+</script>
+</body>
+</html>

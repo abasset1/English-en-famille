@@ -1,0 +1,14 @@
+{
+  "name": "English en famille",
+  "short_name": "English",
+  "description": "Rituels, imagier, jeux et tableau d'étoiles pour apprendre l'anglais en famille",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFDF7",
+  "theme_color": "#C94F2C",
+  "lang": "fr",
+  "icons": [
+    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
