@@ -115,8 +115,39 @@ var THEMES=[
 {en:'Family',fr:'La famille',art:false,items:[{w:'mum',fr:'maman',e:'👩'},{w:'dad',fr:'papa',e:'👨'},{w:'brother',fr:'frère',e:'👦'},{w:'sister',fr:'sœur',e:'👧'},{w:'baby',fr:'bébé',e:'👶'},{w:'grandma',fr:'mamie',e:'👵'},{w:'grandpa',fr:'papi',e:'👴'},{w:'family',fr:'famille',e:'👪'}]},
 {en:'Clothes',fr:'Les vêtements',art:true,items:[{w:'shoes',fr:'chaussures',e:'👟'},{w:'hat',fr:'casquette',e:'🧢'},{w:'coat',fr:'manteau',e:'🧥'},{w:'T-shirt',fr:'tee-shirt',e:'👕'},{w:'socks',fr:'chaussettes',e:'🧦'},{w:'trousers',fr:'pantalon',e:'👖'},{w:'dress',fr:'robe',e:'👗'},{w:'scarf',fr:'écharpe',e:'🧣'}]},
 {en:'Weather',fr:'La météo',art:false,items:[{w:'sunny',fr:'ensoleillé',e:'☀️'},{w:'rainy',fr:'pluvieux',e:'🌧️'},{w:'windy',fr:'venteux',e:'🌬️'},{w:'cloudy',fr:'nuageux',e:'☁️'},{w:'snowy',fr:'neigeux',e:'❄️'},{w:'stormy',fr:'orageux',e:'⛈️'},{w:'rainbow',fr:'arc-en-ciel',e:'🌈'},{w:'cold',fr:'froid',e:'🥶'}]},
-{en:'My house',fr:'La maison',art:true,items:[{w:'house',fr:'maison',e:'🏠'},{w:'door',fr:'porte',e:'🚪'},{w:'window',fr:'fenêtre',e:'🪟'},{w:'chair',fr:'chaise',e:'🪑'},{w:'bed',fr:'lit',e:'🛏️'},{w:'bath',fr:'baignoire',e:'🛁'},{w:'key',fr:'clé',e:'🔑'},{w:'lamp',fr:'lampe',e:'💡'}]}
+{en:'My house',fr:'La maison',art:true,items:[{w:'house',fr:'maison',e:'🏠'},{w:'door',fr:'porte',e:'🚪'},{w:'window',fr:'fenêtre',e:'🪟'},{w:'chair',fr:'chaise',e:'🪑'},{w:'bed',fr:'lit',e:'🛏️'},{w:'bath',fr:'baignoire',e:'🛁'},{w:'key',fr:'clé',e:'🔑'},{w:'lamp',fr:'lampe',e:'💡'}]},
+{en:'Toys',fr:'Les jouets',art:true,need:15,items:[{w:'ball',fr:'ballon',e:'⚽'},{w:'teddy bear',fr:'nounours',e:'🧸'},{w:'kite',fr:'cerf-volant',e:'🪁'},{w:'robot',fr:'robot',e:'🤖'},{w:'puzzle',fr:'puzzle',e:'🧩'},{w:'balloon',fr:'ballon de baudruche',e:'🎈'},{w:'yo-yo',fr:'yo-yo',e:'🪀'},{w:'doll',fr:'poupée',e:'🪆'}]},
+{en:'School',fr:'L’école',art:true,need:15,items:[{w:'pencil',fr:'crayon',e:'✏️'},{w:'book',fr:'livre',e:'📕'},{w:'bag',fr:'cartable',e:'🎒'},{w:'scissors',fr:'ciseaux',e:'✂️'},{w:'ruler',fr:'règle',e:'📏'},{w:'crayon',fr:'craie grasse',e:'🖍️'},{w:'computer',fr:'ordinateur',e:'💻'},{w:'teacher',fr:'maître / maîtresse',e:'🧑‍🏫'}]},
+{en:'Sports',fr:'Les sports',art:false,need:50,items:[{w:'football',fr:'foot',e:'⚽'},{w:'tennis',fr:'tennis',e:'🎾'},{w:'basketball',fr:'basket',e:'🏀'},{w:'swimming',fr:'natation',e:'🏊'},{w:'cycling',fr:'vélo',e:'🚴'},{w:'skiing',fr:'ski',e:'⛷️'},{w:'judo',fr:'judo',e:'🥋'},{w:'running',fr:'course',e:'🏃'}]},
+{en:'Jobs',fr:'Les métiers',art:true,need:50,items:[{w:'doctor',fr:'médecin',e:'🧑‍⚕️'},{w:'firefighter',fr:'pompier',e:'🧑‍🚒'},{w:'cook',fr:'cuisinier',e:'🧑‍🍳'},{w:'farmer',fr:'agriculteur',e:'🧑‍🌾'},{w:'pilot',fr:'pilote',e:'🧑‍✈️'},{w:'police officer',fr:'policier',e:'👮'},{w:'singer',fr:'chanteur',e:'🧑‍🎤'},{w:'astronaut',fr:'astronaute',e:'🧑‍🚀'}]},
+{en:'Transport',fr:'Les transports',art:true,need:100,items:[{w:'car',fr:'voiture',e:'🚗'},{w:'bus',fr:'bus',e:'🚌'},{w:'train',fr:'train',e:'🚆'},{w:'plane',fr:'avion',e:'✈️'},{w:'boat',fr:'bateau',e:'⛵'},{w:'bike',fr:'vélo',e:'🚲'},{w:'rocket',fr:'fusée',e:'🚀'},{w:'tractor',fr:'tracteur',e:'🚜'}]},
+{en:'Fruit & veg',fr:'Fruits et légumes',art:true,need:100,items:[{w:'strawberry',fr:'fraise',e:'🍓'},{w:'orange',fr:'orange',e:'🍊'},{w:'grapes',fr:'raisin',e:'🍇'},{w:'pear',fr:'poire',e:'🍐'},{w:'carrot',fr:'carotte',e:'🥕'},{w:'tomato',fr:'tomate',e:'🍅'},{w:'potato',fr:'pomme de terre',e:'🥔'},{w:'lemon',fr:'citron',e:'🍋'}]},
+{en:'Space',fr:'L’espace',art:true,need:170,items:[{w:'moon',fr:'lune',e:'🌙'},{w:'star',fr:'étoile',e:'⭐'},{w:'planet',fr:'planète',e:'🪐'},{w:'Earth',fr:'Terre',e:'🌍'},{w:'alien',fr:'extraterrestre',e:'👽'},{w:'comet',fr:'comète',e:'☄️'},{w:'telescope',fr:'télescope',e:'🔭'},{w:'sun',fr:'soleil',e:'🌞'}]},
+{en:'Feelings',fr:'Les émotions',art:false,need:170,items:[{w:'happy',fr:'content',e:'😀'},{w:'sad',fr:'triste',e:'😢'},{w:'angry',fr:'en colère',e:'😠'},{w:'scared',fr:'effrayé',e:'😨'},{w:'tired',fr:'fatigué',e:'😴'},{w:'surprised',fr:'surpris',e:'😲'},{w:'sick',fr:'malade',e:'🤒'},{w:'silly',fr:'rigolo',e:'🤪'}]},
+{en:'Sea animals',fr:'Les animaux marins',art:true,need:220,items:[{w:'whale',fr:'baleine',e:'🐳'},{w:'dolphin',fr:'dauphin',e:'🐬'},{w:'shark',fr:'requin',e:'🦈'},{w:'octopus',fr:'pieuvre',e:'🐙'},{w:'crab',fr:'crabe',e:'🦀'},{w:'turtle',fr:'tortue',e:'🐢'},{w:'seal',fr:'phoque',e:'🦭'},{w:'shell',fr:'coquillage',e:'🐚'}]},
+{en:'Jungle',fr:'La jungle',art:true,need:220,items:[{w:'lion',fr:'lion',e:'🦁'},{w:'tiger',fr:'tigre',e:'🐯'},{w:'monkey',fr:'singe',e:'🐒'},{w:'elephant',fr:'éléphant',e:'🐘'},{w:'giraffe',fr:'girafe',e:'🦒'},{w:'snake',fr:'serpent',e:'🐍'},{w:'parrot',fr:'perroquet',e:'🦜'},{w:'crocodile',fr:'crocodile',e:'🐊'}]},
+{en:'Christmas',fr:'Noël',art:true,season:true,items:[{w:'Christmas tree',fr:'sapin de Noël',e:'🎄'},{w:'Santa',fr:'le Père Noël',e:'🎅'},{w:'present',fr:'cadeau',e:'🎁'},{w:'snowman',fr:'bonhomme de neige',e:'⛄'},{w:'reindeer',fr:'renne',e:'🦌'},{w:'bell',fr:'cloche',e:'🔔'},{w:'candle',fr:'bougie',e:'🕯️'},{w:'stocking',fr:'chaussette de Noël',e:'🧦'}]}
 ];
+var XMAS_IDX=THEMES.length-1;
+var UNLOCKS=[{need:15,label:'Thèmes Toys & School'},{need:30,label:'Jeu Spelling',game:'spell'},{need:50,label:'Thèmes Sports & Jobs'},{need:75,label:'Missions d’espion niveau 2',game:'spy2'},{need:100,label:'Thèmes Transport & Fruit'},{need:130,label:'Jeu Sentence builder',game:'sent'},{need:170,label:'Thèmes Space & Feelings'},{need:220,label:'Thèmes Sea animals & Jungle'}];
+var LEVELS=['Starter','Explorer','Adventurer','Detective','Champion','Captain','Hero','Legend','Superstar'];
+var ADVENT=[
+['🎄','Christmas tree','sapin de Noël','Let’s decorate the tree!'],['⭐','star','étoile','Find a star in the house!'],['🔔','bell','cloche','Jingle bells! Let’s sing together!'],['⛄','snowman','bonhomme de neige','Draw a snowman!'],['🧦','stocking','chaussette de Noël','Hang up your stocking!'],['🦌','reindeer','renne','Walk like a reindeer!'],['🍪','cookie','biscuit','Let’s bake cookies!'],['🕯️','candle','bougie','Count the candles: one, two, three!'],['🧤','gloves','gants','Put on your gloves, it’s cold!'],['🎅','Santa','le Père Noël','Dear Santa, I would like…'],['❄️','snowflake','flocon','Cut out a paper snowflake!'],['🎁','present','cadeau','What do you want for Christmas?'],['🍫','chocolate','chocolat','Share a chocolate and say: Here you are!'],['🧣','scarf','écharpe','What colour is your scarf?'],['🎶','song','chanson','Sing We Wish You a Merry Christmas!'],['✨','lights','lumières','Turn off the lights and look at the Christmas lights!'],['🥛','milk','lait','Santa likes milk and cookies!'],['🛷','sleigh','traîneau','Santa’s sleigh is very fast!'],['🧝','elf','lutin','Be Santa’s elf: tidy your room!'],['🎀','ribbon','ruban','Wrap a present with a ribbon!'],['🦃','turkey','dinde','Christmas dinner: turkey or pudding?'],['👑','crown','couronne','Make a paper crown!'],['🌙','night','nuit','Christmas Eve is tomorrow!'],['🎉','Merry Christmas','Joyeux Noël','Merry Christmas, everyone!']
+];
+var SENTENCES=[['I like pizza.','J’aime la pizza.'],['My cat is black.','Mon chat est noir.'],['I have got a brother.','J’ai un frère.'],['It is sunny today.','Il fait beau aujourd’hui.'],['Can I have an apple, please?','Je peux avoir une pomme ?'],['The dog is under the table.','Le chien est sous la table.'],['I am nine years old.','J’ai neuf ans.'],['Where is my bag?','Où est mon sac ?'],['I don’t like carrots.','Je n’aime pas les carottes.'],['We play football on Saturday.','On joue au foot le samedi.'],['She has got long hair.','Elle a les cheveux longs.'],['The sky is blue.','Le ciel est bleu.'],['I want a red bike.','Je veux un vélo rouge.'],['My dad is a doctor.','Mon père est médecin.'],['Let’s go to the park!','Allons au parc !'],['I can swim very fast.','Je sais nager très vite.'],['The elephant is big and grey.','L’éléphant est grand et gris.'],['What is your name?','Comment tu t’appelles ?'],['I live in a small house.','J’habite dans une petite maison.'],['Today is Monday.','Aujourd’hui c’est lundi.'],['He is wearing a green hat.','Il porte un chapeau vert.'],['I am very hungry.','J’ai très faim.'],['Open the door, please.','Ouvre la porte, s’il te plaît.'],['The bird is in the tree.','L’oiseau est dans l’arbre.'],['I love my family.','J’aime ma famille.']];
+var MISSIONS2=[['Find something heavier than a book!','Trouve quelque chose de plus lourd qu’un livre !'],['Tell everyone what you ate for lunch!','Raconte ce que tu as mangé à midi !'],['Find something you use when it is raining!','Trouve un objet qu’on utilise quand il pleut !'],['Describe your bedroom in three sentences!','Décris ta chambre en trois phrases !'],['Find something made of wood and something made of metal!','Trouve un objet en bois et un objet en métal !'],['Ask Mum three questions in English!','Pose trois questions en anglais à Maman !'],['Say the days of the week in English!','Dis les jours de la semaine en anglais !'],['Say the months of the year in English!','Dis les mois de l’année en anglais !'],['Find one object for every colour of the rainbow!','Trouve un objet de chaque couleur de l’arc-en-ciel !'],['Say five things you can do: I can…','Dis cinq choses que tu sais faire : I can…'],['Describe someone in the family without saying the name!','Décris quelqu’un de la famille sans dire son nom !'],['Find something you can open and close!','Trouve quelque chose qui s’ouvre et se ferme !'],['Say what you want to be when you are older!','Dis ce que tu veux faire plus tard !'],['Count from ten to one hundred in tens!','Compte de dix en dix jusqu’à cent !'],['Mime an animal: the others say its name in English!','Mime un animal : les autres disent son nom en anglais !'],['Say three things you like and two you don’t like!','Dis trois choses que tu aimes et deux que tu n’aimes pas !'],['Find something longer than your arm!','Trouve quelque chose de plus long que ton bras !'],['Give directions to the kitchen: go straight, turn left…','Guide quelqu’un jusqu’à la cuisine : go straight, turn left…'],['Say the alphabet in English!','Récite l’alphabet en anglais !'],['Invent a funny sentence with three animals!','Invente une phrase rigolote avec trois animaux !']];
+var XMIS=[['Sing Jingle Bells!','Chante Jingle Bells !'],['Find something gold or silver!','Trouve quelque chose de doré ou d’argenté !'],['Say Merry Christmas to everyone!','Dis Merry Christmas à tout le monde !'],['Draw a Christmas tree in ten seconds!','Dessine un sapin en dix secondes !'],['Walk like a reindeer to the kitchen!','Marche comme un renne jusqu’à la cuisine !'],['Name three Christmas words in English!','Cite trois mots de Noël en anglais !'],['Pretend to be Santa: Ho ho ho!','Fais le Père Noël : Ho ho ho !'],['Find something red and white!','Trouve quelque chose de rouge et blanc !'],['Count to twenty-four in English!','Compte jusqu’à vingt-quatre en anglais !'],['Whisper what you want for Christmas!','Chuchote ce que tu veux pour Noël !']];
+var XWYR=[['be Santa','be an elf','être le Père Noël / un lutin'],['have snow on Christmas Day','have sun on Christmas Day','de la neige / du soleil à Noël'],['open one present now','open three presents on Christmas Day','un cadeau maintenant / trois à Noël'],['build a snowman','have a snowball fight','faire un bonhomme de neige / une bataille de boules de neige'],['ride a sleigh','ride a reindeer','monter dans un traîneau / sur un renne'],['decorate the tree','wrap the presents','décorer le sapin / emballer les cadeaux'],['sing Christmas songs','watch a Christmas film','chanter / regarder un film de Noël'],['eat Christmas cookies','eat chocolate','des biscuits de Noël / du chocolat']];
+function lifetime(){var t=familyTotal();(S.history||[]).forEach(function(h){t+=h.total||0});return t}
+function xmasActive(){var d=new Date(),m=d.getMonth();return m===11||(m===0&&d.getDate()<=6)||!!S.xmasEarly}
+function themeOpen(i){var t=THEMES[i];if(!t)return false;if(t.season)return xmasActive();return lifetime()>=(t.need||0)}
+function curThemeIdx(){var i=S.theme||0;return themeOpen(i)?i:0}
+function levelIdx(){var L=lifetime(),n=0;UNLOCKS.forEach(function(u){if(L>=u.need)n++});return n}
+function gameOpen(id){var u=UNLOCKS.filter(function(x){return x.game===id})[0];return !u||lifetime()>=u.need}
+function needOf(id){var u=UNLOCKS.filter(function(x){return x.game===id})[0];return u?u.need:0}
+function checkUnlock(){var n=levelIdx(),prev=S.lastLevel||0;if(n>prev){var u=UNLOCKS[n-1];setTimeout(function(){toast('🎉 Débloqué : '+u.label);speak('New level! You are a '+LEVELS[n]+'!')},400)}S.lastLevel=n}
+function doorOpenable(n){if(S.xmasEarly)return true;var d=new Date();if(d.getMonth()===11)return d.getDate()>=n;if(d.getMonth()===0&&d.getDate()<=6)return true;return false}
+
 
 var DAYS=[
 {en:'Monday',fr:'Lundi',short:'Lun',c:'coral',t:'Nouveau thème',d:'On choisit le thème de la semaine et on colle des post-its sur les objets de la maison.',p:[['What is this?','Qu’est-ce que c’est ?'],['This is a cat!','C’est un chat !'],['Show me the door!','Montre-moi la porte !']]},
@@ -224,7 +255,7 @@ useCap('artifact').then(function(a){ART=a});
 useCap('tts').then(function(t){TTS=t;render()});
 
 function saveLocal(){try{localStorage.setItem('elf-state',JSON.stringify(S))}catch(e){}}
-function persist(){S.rev=(S.rev||0)+1;saveLocal();if(ART&&canPublish){clearTimeout(pubTimer);pubTimer=setTimeout(doPublish,1800)}}
+function persist(){checkUnlock();S.rev=(S.rev||0)+1;saveLocal();if(ART&&canPublish){clearTimeout(pubTimer);pubTimer=setTimeout(doPublish,1800)}}
 function doPublish(){
   if(!ART||!canPublish)return;
   Promise.resolve().then(function(){return ART.publish(buildDoc())}).catch(function(e){
@@ -262,16 +293,25 @@ function familyTotal(){var t=0;S.people.forEach(function(p){(S.stars[p.id]||[]).
 // ---------- view state ----------
 var TABS=[{id:'aujourdhui',l:'Aujourd’hui',i:'☀️'},{id:'mots',l:'Mots',i:'🔤'},{id:'jeux',l:'Jeux',i:'🎲'},{id:'etoiles',l:'Étoiles',i:'⭐'}];
 function curTab(){var h=(location.hash||'').replace('#','');return TABS.some(function(t){return t.id===h})?h:'aujourdhui'}
-var viewTheme=S.theme||0;var G=null;var modal=null;var revealWord=false;
+var viewTheme=curThemeIdx();var G=null;var modal=null;var revealWord=false;
 
 function daily(){try{return JSON.parse(localStorage.getItem('elf-daily-'+dateKey())||'{}')}catch(e){return{}}}
 function setDaily(o){try{localStorage.setItem('elf-daily-'+dateKey(),JSON.stringify(o))}catch(e){}}
 
 // ---------- renders ----------
 function rToday(){
-  var di=todayIdx(),D=DAYS[di],th=THEMES[S.theme||0],dl=daily(),done=EVERYDAY.filter(function(x){return dl[x.k]}).length;
+  var di=todayIdx(),D=DAYS[di],th=THEMES[curThemeIdx()],dl=daily(),done=EVERYDAY.filter(function(x){return dl[x.k]}).length;
   var h='';
   h+='<div class="row between"><div><div class="label">'+esc(new Date().toLocaleDateString('fr-FR',{weekday:'long',day:'numeric',month:'long'}))+'</div></div><button class="chip" data-act="tab" data-tab="mots">Thème : '+esc(th.en)+' '+(th.items[0].e||'🎨')+'</button></div>';
+  if(xmasActive()){
+    var op=S.advent||[];
+    h+='<div class="card" style="border-color:#2E7D4F;background:#F2FAF4"><div class="row between" style="margin-bottom:10px"><h3 style="font-size:21px;color:#1F6B40">Advent calendar 🎄</h3><span class="label">'+op.length+' / 24</span></div><div class="grid4" style="grid-template-columns:repeat(6,minmax(0,1fr));gap:6px">';
+    for(var n=1;n<=24;n++){var isO=op.indexOf(n)>=0,can=doorOpenable(n);h+='<button data-act="door" data-n="'+n+'" aria-label="Case '+n+'" style="aspect-ratio:1;border-radius:10px;border:2px solid '+(isO?'#2E7D4F':can?'#C94F2C':'#E5DCC8')+';background:'+(isO?'#fff':can?'#C94F2C':'#fff')+';color:'+(can&&!isO?'#fff':'#1F2A44')+';font-family:Fredoka,sans-serif;font-size:'+(isO?'22px':'17px')+';font-weight:600;padding:0">'+(isO?ADVENT[n-1][0]:n)+'</button>'}
+    h+='</div></div>';
+  }else if(new Date().getMonth()===10){
+    var dd=Math.ceil((new Date(new Date().getFullYear(),11,1)-new Date())/86400000);
+    h+='<div class="card" style="border-color:#2E7D4F;background:#F2FAF4;display:flex;align-items:center;gap:12px"><span style="font-size:34px" aria-hidden="true">🎄</span><div><b>Le pack Noël arrive dans '+dd+' jour'+(dd>1?'s':'')+' !</b><div class="muted" style="font-size:13px;font-weight:700">Calendrier de l\u2019Avent, mots, missions et questions de Noël</div></div></div>';
+  }
   h+='<div class="card c-'+D.c+'"><div class="band '+D.c+'"><div class="d">'+D.en+'</div><div class="f">'+D.fr+' · rituel du jour</div></div>';
   h+='<h2 style="font-size:24px">'+esc(D.t)+'</h2><p style="margin:6px 0 12px;font-size:15px;line-height:1.45">'+esc(D.d)+'</p><div class="stack">'+D.p.map(phraseBtn).join('')+'</div>';
   if(di===3)h+='<button class="btn blue full" style="margin-top:12px" data-act="tab" data-tab="jeux">Jouer au Memory</button>';
@@ -286,10 +326,10 @@ function rToday(){
   return h;
 }
 
-function themeChips(act){return '<div class="chips">'+THEMES.map(function(t,i){return '<button class="chip'+(i===viewTheme?' on':'')+'" data-act="'+act+'" data-i="'+i+'">'+esc(t.en)+(i===(S.theme||0)?' ★':'')+'</button>'}).join('')+'</div>'}
+function themeChips(act){var order=[];if(xmasActive())order.push(XMAS_IDX);THEMES.forEach(function(t,i){if(!t.season)order.push(i)});var cur=curThemeIdx();return '<div class="chips">'+order.map(function(i){var t=THEMES[i],open=themeOpen(i);return '<button class="chip'+(i===viewTheme?' on':'')+'" data-act="'+act+'" data-i="'+i+'"'+(open?'':' style="opacity:.55"')+'>'+(open?'':'🔒 ')+esc(t.en)+(t.season?' 🎄':'')+(i===cur?' ★':'')+(open?'':' · '+t.need+'⭐')+'</button>'}).join('')+'</div>'}
 
 function rWords(){
-  var th=THEMES[viewTheme],isWeek=viewTheme===(S.theme||0);
+  var th=THEMES[viewTheme],isWeek=viewTheme===curThemeIdx();
   var h=themeChips('vtheme');
   h+='<div class="row between"><div><h2 style="font-size:26px">'+esc(th.en)+'</h2><div class="muted" style="font-weight:700;font-size:14px">'+esc(th.fr)+(hasAudio()?' · touchez une image pour l’écouter':'')+'</div></div>';
   h+=isWeek?'<span class="label" style="color:var(--teal)">★ Cette semaine</span>':'<button class="btn ghost" data-act="settheme" style="padding:10px 12px;font-size:13px">★ Thème de la semaine</button>';
@@ -308,6 +348,9 @@ function rGames(){
     h+='<button class="game-tile" data-act="g-missing"><span class="ic" style="background:#EAF5F3">🙈</span><span><b>What’s missing?</b><span>Quelle image a disparu ? · tout le monde</span></span></button>';
     h+='<button class="game-tile" data-act="g-spy"><span class="ic" style="background:#FBE9E3">🕵️</span><span><b>Spy missions</b><span>Tirer une mission en anglais et la réussir à temps · CM1</span></span></button>';
     h+='<button class="game-tile" data-act="g-wyr"><span class="ic" style="background:#EAF5F3">🤔</span><span><b>Would you rather…?</b><span>Choisir et répondre « I\u2019d rather… because… » · CM1 + parents</span></span></button>';
+    var spO=gameOpen('spell'),seO=gameOpen('sent');
+    h+='<button class="game-tile" data-act="g-spell"'+(spO?'':' style="opacity:.6"')+'><span class="ic" style="background:#FBE9E3">'+(spO?'🔡':'🔒')+'</span><span><b>Spelling</b><span>'+(spO?'Remettre les lettres dans l\u2019ordre · CM1':'Se débloque à '+needOf('spell')+' étoiles')+'</span></span></button>';
+    h+='<button class="game-tile" data-act="g-sent"'+(seO?'':' style="opacity:.6"')+'><span class="ic" style="background:#E8EEF8">'+(seO?'🧱':'🔒')+'</span><span><b>Sentence builder</b><span>'+(seO?'Écouter et reconstruire la phrase · CM1':'Se débloque à '+needOf('sent')+' étoiles')+'</span></span></button>';
     h+='<button class="game-tile" data-act="g-listen"><span class="ic" style="background:#FFF4D6">👂</span><span><b>Listen &amp; find</b><span>'+(hasAudio()?'Écouter le mot et toucher la bonne image':'Lire le mot et toucher la bonne image')+'</span></span></button>';
     h+='</div><h2 style="font-size:24px;margin-top:6px">Jeux en vrai</h2><div class="stack">';
     REAL.forEach(function(g){h+='<details><summary>'+esc(g.t)+'&nbsp;<span class="label" style="font-family:Nunito">· '+esc(g.a)+'</span></summary><p style="margin:0 0 10px;font-size:15px;line-height:1.45">'+esc(g.d)+'</p><div class="stack">'+g.p.map(function(x){return phraseBtn([x])}).join('')+'</div></details>'});
@@ -340,7 +383,7 @@ function rGames(){
     return h3;
   }
   if(G.kind==='spy'){
-    var m=MISSIONS[G.deck[G.i]],cur=S.people[G.turn%S.people.length];
+    var m=G.deck[G.i],cur=S.people[G.turn%S.people.length];
     var h5=back.replace('<span class="label">'+esc(THEMES[viewTheme].en)+'</span>','<span class="label">Mission '+(G.done+G.skip+1)+'</span>')+'<h2 style="font-size:24px">Spy missions 🕵️</h2>';
     h5+='<div class="card" style="border-color:'+cur.color+'"><div class="label">Agent en mission</div><div class="fred" style="font-size:26px;color:'+cur.color+'">'+esc(cur.name)+'</div></div>';
     h5+='<div class="card c-coral" style="text-align:center"><div class="label" style="margin-bottom:8px">Your mission</div><div class="big-prompt">'+esc(m[0])+'</div>'+(G.fr?'<p class="muted" style="font-weight:700;margin:8px 0 0">'+esc(m[1])+'</p>':'')+'<div class="row" style="justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap">'+(hasAudio()?'<button class="btn sun" data-act="say" data-say="'+esc(m[0])+'">🔊 Écouter</button>':'')+'<button class="btn ghost" data-act="spy-fr">'+(G.fr?'Cacher':'Aide :')+' français</button></div></div>';
@@ -350,13 +393,29 @@ function rGames(){
     return h5;
   }
   if(G.kind==='wyr'){
-    var q=WYR[G.deck[G.i]];
+    var q=G.deck[G.i];
     var h6=back.replace('<span class="label">'+esc(THEMES[viewTheme].en)+'</span>','<span class="label">Question '+(G.n+1)+'</span>')+'<h2 style="font-size:24px">Would you rather…? 🤔</h2>';
     h6+='<div class="card c-teal" style="text-align:center"><div class="big-prompt">Would you rather '+esc(q[0])+' or '+esc(q[1])+'?</div>'+(G.fr?'<p class="muted" style="font-weight:700;margin:8px 0 0">Tu préfères : '+esc(q[2])+' ?</p>':'')+'<div class="row" style="justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap">'+(hasAudio()?'<button class="btn sun" data-act="say" data-say="'+esc('Would you rather '+q[0]+' or '+q[1]+'?')+'">🔊 Écouter</button>':'')+'<button class="btn ghost" data-act="wyr-fr">'+(G.fr?'Cacher':'Aide :')+' français</button></div></div>';
     h6+='<div class="grid2">'+[0,1].map(function(k){return '<button class="pic'+(G.pick===k?' ok':'')+'" style="min-height:110px" data-act="wyr-pick" data-k="'+k+'"><span class="w" style="font-size:19px;text-align:center">'+esc(q[k])+'</span></button>'}).join('')+'</div>';
     if(G.pick!=null)h6+='<div class="card" style="text-align:center"><div class="label">À dire à voix haute</div><div class="big-prompt" style="font-size:22px;margin-top:6px">I\u2019d rather '+esc(q[G.pick])+' because…</div><p class="muted" style="font-weight:700;margin:8px 0 0">Idées : it\u2019s fun · it\u2019s cool · I love… · I don\u2019t like…</p></div>';
     h6+='<button class="btn teal full" data-act="wyr-next">Next question →</button>';
     return h6;
+  }
+  if(G.kind==='spell'){
+    var h7=back+'<div class="row between"><h2 style="font-size:24px">Spelling</h2><span class="label">⭐ '+G.score+'</span></div>';
+    h7+='<div class="card" style="text-align:center"><div style="display:grid;place-items:center">'+pic(G.it)+'</div><div class="muted" style="font-weight:700;margin-top:6px">'+esc(G.it.fr)+'</div>'+(hasAudio()?'<button class="btn sun" style="margin-top:10px" data-act="say" data-say="'+esc(G.it.w)+'">🔊 Écouter</button>':'')+'</div>';
+    h7+='<div class="row" style="justify-content:center;gap:6px;flex-wrap:wrap">'+G.word.split('').map(function(_,i){var t=G.picked[i];return '<div class="slot'+(G.result==='ok'?' ok':G.bad?' ko':'')+'" style="min-height:52px;width:42px;font-size:26px;border-radius:12px">'+(t!=null?esc(G.tiles[t]):'')+'</div>'}).join('')+'</div>';
+    if(G.result==='ok')h7+='<div class="card c-teal" style="text-align:center"><div class="big-prompt">Well done!</div><button class="btn teal full" style="margin-top:10px" data-act="g-spell">Mot suivant →</button></div>';
+    else h7+='<div class="row" style="justify-content:center;gap:8px;flex-wrap:wrap">'+G.tiles.map(function(l,i){var used=G.picked.indexOf(i)>=0;return '<button class="btn '+(used?'ghost':'blue')+'" style="width:48px;padding:0;font-size:22px" data-act="sp-tile" data-i="'+i+'"'+(used?' disabled':'')+'>'+esc(l)+'</button>'}).join('')+'</div><div class="grid2"><button class="btn ghost" data-act="sp-undo">⌫ Effacer</button><button class="btn ghost" data-act="sp-hint">Indice</button></div>';
+    return h7;
+  }
+  if(G.kind==='sent'){
+    var h8=back.replace('<span class="label">'+esc(THEMES[viewTheme].en)+'</span>','<span class="label">⭐ '+G.score+'</span>')+'<h2 style="font-size:24px">Sentence builder</h2>';
+    h8+='<div class="card" style="text-align:center"><div class="muted" style="font-weight:800">'+esc(G.s[1])+'</div>'+(hasAudio()?'<button class="btn sun" style="margin-top:10px" data-act="say" data-say="'+esc(G.s[0])+'">🔊 Écouter la phrase</button>':'')+'</div>';
+    h8+='<div class="card'+(G.result==='ok'?' c-teal':G.bad?' ko':'')+'" style="min-height:70px;display:flex;flex-wrap:wrap;gap:6px;align-items:center;justify-content:center">'+(G.picked.length?G.picked.map(function(i){return '<span class="chip on">'+esc(G.words[i])+'</span>'}).join(''):'<span class="muted" style="font-weight:700">Touchez les mots dans l\u2019ordre</span>')+'</div>';
+    if(G.result==='ok')h8+='<div class="card c-teal" style="text-align:center"><div class="big-prompt">Perfect!</div><button class="btn teal full" style="margin-top:10px" data-act="g-sent">Phrase suivante →</button></div>';
+    else h8+='<div class="row" style="justify-content:center;gap:8px;flex-wrap:wrap">'+G.words.map(function(w,i){var used=G.picked.indexOf(i)>=0;return '<button class="chip" data-act="se-word" data-i="'+i+'"'+(used?' disabled style="opacity:.3"':'')+'>'+esc(w)+'</button>'}).join('')+'</div><button class="btn ghost full" data-act="se-undo">⌫ Effacer</button>';
+    return h8;
   }
   if(G.kind==='listen'){
     var th=THEMES[viewTheme];var h4=back+'<div class="row between"><h2 style="font-size:24px">Listen &amp; find</h2><span class="label">⭐ '+G.score+'</span></div>';
@@ -387,17 +446,24 @@ function rStars(){
   h+='</div></div>';
   h+='<div class="card"><div class="row between"><div><div class="label">Total famille</div><div class="total">'+tot+' <span style="font-size:22px;color:var(--muted)">/ '+goal+'</span></div></div><div style="font-size:44px" aria-hidden="true">'+(tot>=goal?'🎉':'⭐')+'</div></div><div class="bar" style="margin:12px 0 10px" role="progressbar" aria-valuenow="'+tot+'" aria-valuemin="0" aria-valuemax="'+goal+'"><i style="width:'+pct+'%"></i></div>';
   h+='<div style="font-size:15px;font-weight:700">'+(tot>=goal?'Objectif atteint ! Récompense : ':'Récompense : ')+esc(S.reward||'à choisir dans Réglages')+'</div></div>';
+  var L=lifetime(),lv=levelIdx(),nx=UNLOCKS[lv],prevNeed=lv?UNLOCKS[lv-1].need:0;
+  h+='<div class="card c-blue"><div class="row between"><div><div class="label">Niveau '+(lv+1)+'</div><div class="fred" style="font-size:28px;color:var(--blue)">'+LEVELS[lv]+'</div></div><div style="text-align:right"><div class="total" style="font-size:32px">'+L+' ⭐</div><div class="label">depuis le début</div></div></div>';
+  if(nx){var pp=Math.min(100,Math.round((L-prevNeed)*100/Math.max(1,nx.need-prevNeed)));h+='<div class="bar" style="margin:12px 0 8px"><i style="width:'+pp+'%;background:var(--blue)"></i></div><div style="font-size:14px;font-weight:700">Prochain déblocage à '+nx.need+' ⭐ : '+esc(nx.label)+'</div>'}
+  else h+='<div style="font-size:15px;font-weight:800;margin-top:10px">Tout est débloqué. Bravo, Superstars !</div>';
+  h+='<details style="border:0;padding:0;margin-top:10px"><summary style="font-size:16px">Tous les déblocages</summary><div class="stack">'+UNLOCKS.map(function(u){var ok=L>=u.need;return '<div class="row between" style="font-weight:700;font-size:14px;'+(ok?'':'opacity:.6')+'"><span>'+(ok?'✅ ':'🔒 ')+esc(u.label)+'</span><span>'+u.need+' ⭐</span></div>'}).join('')+'</div></details></div>';
   if(S.history&&S.history.length){h+='<details><summary>Semaines précédentes</summary><div class="stack">'+S.history.slice().reverse().map(function(x){return '<div class="row between" style="font-weight:700"><span>'+esc(x.label||x.week)+'</span><span>'+x.total+' ⭐</span></div>'}).join('')+'</div></details>'}
   return h;
 }
 
 function rModal(){
   if(!modal)return '';
+  if(modal.kind==='advent'){var a=ADVENT[modal.n-1];return '<div class="modal-bg"><div class="modal" role="dialog" style="text-align:center"><div class="label">'+modal.n+' December</div><div style="font-size:72px;line-height:1.1" aria-hidden="true">'+a[0]+'</div><div class="fred" style="font-size:30px">'+esc(a[1])+'</div><div class="muted" style="font-weight:700">'+esc(a[2])+'</div>'+phraseBtn([a[3]])+'<button class="btn teal full" data-act="close">Merry Christmas! 🎄</button></div></div>'}
   if(modal.kind==='settings'){
     var h='<div class="modal-bg"><form class="modal" id="setform"><h2 style="font-size:22px">Réglages</h2>';
     S.people.forEach(function(p,i){h+='<label class="field">Membre '+(i+1)+'<input name="n'+i+'" value="'+esc(p.name)+'" maxlength="16"></label>'});
     h+='<label class="field">Objectif d’étoiles pour la famille<input name="goal" type="number" min="1" max="99" value="'+(S.goal||20)+'"></label>';
     h+='<label class="field">Récompense<input name="reward" value="'+esc(S.reward||'')+'" maxlength="60"></label>';
+    h+='<label class="row" style="font-weight:700;font-size:14px;gap:10px"><input type="checkbox" name="xmas" style="width:22px;height:22px"'+(S.xmasEarly?' checked':'')+'> Activer le pack Noël maintenant (aperçu)</label>';
     h+='<div class="row" style="justify-content:flex-end"><button type="button" class="btn ghost" data-act="close">Annuler</button><button type="submit" class="btn teal">Enregistrer</button></div></form></div>';
     return h;
   }
@@ -432,22 +498,30 @@ var ACT={
   say:function(el){speak(el.dataset.say)},
   daily:function(el){var d=daily();d[el.dataset.k]=!d[el.dataset.k];setDaily(d);render()},
   allstar:function(){if(S.week!==isoWeek(new Date())){location.hash='etoiles';render();return}var ti=todayIdx();S.people.forEach(function(p){S.stars[p.id][ti]=1});persist();speak('Well done, team!');toast('Une étoile pour tout le monde aujourd’hui !')},
-  vtheme:function(el){viewTheme=+el.dataset.i;G=null;render()},
+  vtheme:function(el){var i=+el.dataset.i;if(!themeOpen(i)){toast('Encore '+(THEMES[i].need-lifetime())+' étoiles pour débloquer '+THEMES[i].en);return}viewTheme=i;G=null;render()},
   settheme:function(){S.theme=viewTheme;persist();render();toast('Nouveau thème de la semaine : '+THEMES[viewTheme].en)},
   star:function(el){var p=el.dataset.p,d=+el.dataset.d;if(!S.stars[p])return;S.stars[p][d]=S.stars[p][d]?0:1;persist();render()},
   settings:function(){modal={kind:'settings'};render()},
   close:function(){modal=null;render()},
   newweek:function(){var tot=familyTotal();S.history=(S.history||[]).concat([{week:S.week,label:'Semaine '+String(S.week).split('-W')[1],total:tot}]).slice(-10);S.people.forEach(function(p){S.stars[p.id]=[0,0,0,0,0,0,0]});S.week=isoWeek(new Date());persist();render()},
   'confirm-yes':function(){var f=modal&&modal.onYes;modal=null;if(f)f();render()},
-  'g-spy':function(){stopSpyTimer();var pts=G&&G.kind==='spy'?G.pts:{};G={kind:'spy',deck:shuffle(MISSIONS.map(function(_,i){return i})),i:0,turn:0,left:60,running:false,fr:false,pts:pts,done:0,skip:0};render();window.scrollTo(0,0)},
+  'g-spy':function(){stopSpyTimer();var pts=G&&G.kind==='spy'?G.pts:{};G={kind:'spy',deck:shuffle(MISSIONS.concat(gameOpen('spy2')?MISSIONS2:[],xmasActive()?XMIS:[])),i:0,turn:0,left:60,running:false,fr:false,pts:pts,done:0,skip:0};render();window.scrollTo(0,0)},
   'spy-fr':function(){G.fr=!G.fr;render()},
   'spy-go':function(){if(!G||G.kind!=='spy')return;if(G.left<=0)G.left=60;G.running=true;speak('Go!');render();stopSpyTimer();spyTimer=setInterval(function(){if(!G||G.kind!=='spy'){stopSpyTimer();return}G.left--;var el=document.getElementById('spyclock');if(el){el.textContent=G.left+'s';if(G.left<=10)el.style.color='var(--coral)'}if(G.left<=0){stopSpyTimer();G.running=false;speak('Time is up!');render()}},1000)},
   'spy-ok':function(){if(!G||G.kind!=='spy')return;stopSpyTimer();var p=S.people[G.turn%S.people.length];G.pts[p.id]=(G.pts[p.id]||0)+1;G.done++;speak('Mission accomplished! Well done, agent!');spyNext()},
   'spy-skip':function(){if(!G||G.kind!=='spy')return;stopSpyTimer();G.skip++;spyNext()},
-  'g-wyr':function(){G={kind:'wyr',deck:shuffle(WYR.map(function(_,i){return i})),i:0,n:0,pick:null,fr:false};render();window.scrollTo(0,0)},
+  'g-wyr':function(){G={kind:'wyr',deck:shuffle(WYR.concat(xmasActive()?XWYR:[])),i:0,n:0,pick:null,fr:false};render();window.scrollTo(0,0)},
   'wyr-fr':function(){G.fr=!G.fr;render()},
-  'wyr-pick':function(el){var k=+el.dataset.k;G.pick=k;speak('I\u2019d rather '+WYR[G.deck[G.i]][k]);render()},
+  'wyr-pick':function(el){var k=+el.dataset.k;G.pick=k;speak('I\u2019d rather '+G.deck[G.i][k]);render()},
   'wyr-next':function(){G.i=(G.i+1)%G.deck.length;G.n++;G.pick=null;G.fr=false;render();window.scrollTo(0,0)},
+  'g-spell':function(){if(!gameOpen('spell')){toast('Encore '+(needOf('spell')-lifetime())+' étoiles pour débloquer Spelling');return}var pool=THEMES[viewTheme].items.filter(function(it){return /^[a-z]{2,9}$/i.test(it.w)});if(!pool.length)pool=THEMES[1].items;var keep=G&&G.kind==='spell'?G.score:0;var it=pool[Math.floor(Math.random()*pool.length)];var tiles=it.w.toLowerCase().split('');var sh=shuffle(tiles);if(sh.join('')===tiles.join('')&&tiles.length>1)sh=sh.reverse();G={kind:'spell',it:it,word:it.w.toLowerCase(),tiles:sh,picked:[],result:null,bad:false,score:keep};render();window.scrollTo(0,0);setTimeout(function(){speak(it.w)},250)},
+  'sp-tile':function(el){if(!G||G.result)return;var i=+el.dataset.i;if(G.picked.indexOf(i)>=0)return;G.bad=false;G.picked.push(i);if(G.picked.length===G.word.length){var w=G.picked.map(function(k){return G.tiles[k]}).join('');if(w===G.word){G.result='ok';G.score++;speak('Yes! '+G.it.w+'! Well done!')}else{G.bad=true;speak('Try again!');var gg=G;setTimeout(function(){if(G===gg){G.picked=[];G.bad=false;render()}},900)}}render()},
+  'sp-undo':function(){if(!G||G.result)return;G.picked.pop();G.bad=false;render()},
+  'sp-hint':function(){if(!G||G.result)return;var n=G.picked.length;var ok=true;for(var k=0;k<n;k++){if(G.tiles[G.picked[k]]!==G.word[k]){ok=false;break}}if(!ok){G.picked=[];n=0}var need=G.word[n];for(var j=0;j<G.tiles.length;j++){if(G.picked.indexOf(j)<0&&G.tiles[j]===need){G.picked.push(j);break}}if(G.picked.length===G.word.length){G.result='ok';speak(G.it.w)}render()},
+  'g-sent':function(){if(!gameOpen('sent')){toast('Encore '+(needOf('sent')-lifetime())+' étoiles pour débloquer Sentence builder');return}var keep=G&&G.kind==='sent'?G.score:0;var sx=SENTENCES[Math.floor(Math.random()*SENTENCES.length)];var words=sx[0].split(' ');var sh=shuffle(words);if(sh.join(' ')===sx[0])sh=sh.reverse();G={kind:'sent',s:sx,target:words,words:sh,picked:[],result:null,bad:false,score:keep};render();window.scrollTo(0,0);setTimeout(function(){speak(sx[0])},250)},
+  'se-word':function(el){if(!G||G.result)return;var i=+el.dataset.i;if(G.picked.indexOf(i)>=0)return;G.bad=false;G.picked.push(i);if(G.picked.length===G.words.length){var built=G.picked.map(function(k){return G.words[k]}).join(' ');if(built===G.s[0]){G.result='ok';G.score++;speak(G.s[0])}else{G.bad=true;speak('Try again!');var gg=G;setTimeout(function(){if(G===gg){G.picked=[];G.bad=false;render()}},1000)}}render()},
+  'se-undo':function(){if(!G||G.result)return;G.picked.pop();G.bad=false;render()},
+  door:function(el){var n=+el.dataset.n;if(!doorOpenable(n)){toast('Patience ! Cette case s’ouvre le '+n+' décembre');return}S.advent=S.advent||[];if(S.advent.indexOf(n)<0){S.advent.push(n);persist()}modal={kind:'advent',n:n};render();speak(ADVENT[n-1][1]+'! '+ADVENT[n-1][3])},
   'g-back':function(){stopSpyTimer();G=null;render()},
   'g-memory':function(el){startMemory(el.dataset.mode);render();window.scrollTo(0,0)},
   'g-missing':function(){startMissing();render();window.scrollTo(0,0)},
@@ -464,9 +538,10 @@ root.addEventListener('submit',function(e){
   e.preventDefault();var f=e.target;if(f.id!=='setform')return;
   S.people.forEach(function(p,i){var v=(f.elements['n'+i].value||'').trim();if(v)p.name=v.slice(0,16)});
   var g=parseInt(f.elements.goal.value,10);if(g>0&&g<100)S.goal=g;
-  S.reward=(f.elements.reward.value||'').trim().slice(0,60);S.named=true;
+  S.reward=(f.elements.reward.value||'').trim().slice(0,60);S.named=true;S.xmasEarly=!!f.elements.xmas.checked;
   modal=null;persist();render();toast('Réglages enregistrés');
 });
+if(S.lastLevel==null)S.lastLevel=levelIdx();
 window.addEventListener('hashchange',function(){if(curTab()!=='jeux'){stopSpyTimer();G=null}render()});
 render();
 })();
