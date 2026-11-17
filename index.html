@@ -137,6 +137,72 @@ var EVERYDAY=[
 var MORNING=[['Good morning!','Bonjour !'],['How are you?','Comment ça va ?'],['I’m fine, thank you!','Ça va bien, merci !'],['What’s the weather like?','Quel temps fait-il ?'],['It’s sunny! / It’s raining!','Il fait beau ! / Il pleut !']];
 var NIGHT=[['Time for bed!','Au lit !'],['Brush your teeth!','Brosse-toi les dents !'],['Good night!','Bonne nuit !'],['Sweet dreams!','Fais de beaux rêves !'],['I love you!','Je t’aime !']];
 var MAGIC=[['Please / Thank you','S’il te plaît / Merci'],['Can I have…, please?','Est-ce que je peux avoir… ?'],['Where is my…?','Où est mon / ma… ?'],['I like… / I don’t like…','J’aime… / Je n’aime pas…'],['Let’s go!','On y va !'],['Time to eat!','À table !'],['Well done! / Great job!','Bravo !'],['I’m sorry.','Pardon.'],['Help me, please!','Aide-moi, s’il te plaît !']];
+var MISSIONS=[
+['Find something red and bring it here!','Trouve quelque chose de rouge et rapporte-le !'],
+['Find something round!','Trouve quelque chose de rond !'],
+['Touch something cold!','Touche quelque chose de froid !'],
+['Bring me a spoon!','Apporte-moi une cuillère !'],
+['Find three things that are blue!','Trouve trois choses bleues !'],
+['Hide a sock in the kitchen!','Cache une chaussette dans la cuisine !'],
+['Say good morning to Dad like a robot!','Dis bonjour à Papa comme un robot !'],
+['Walk like a penguin to the door!','Marche comme un pingouin jusqu’à la porte !'],
+['Jump ten times and count in English!','Saute dix fois en comptant en anglais !'],
+['Find something smaller than your hand!','Trouve un objet plus petit que ta main !'],
+['Find something soft!','Trouve quelque chose de doux !'],
+['Put a book on your head and walk!','Mets un livre sur ta tête et marche !'],
+['Draw a cat with your eyes closed!','Dessine un chat les yeux fermés !'],
+['Find something you can eat for breakfast!','Trouve quelque chose qu’on mange au petit-déj !'],
+['Sing Happy Birthday in English!','Chante Happy Birthday en anglais !'],
+['Name five animals in English!','Cite cinq animaux en anglais !'],
+['Name five colours in English!','Cite cinq couleurs en anglais !'],
+['Find something that starts with B!','Trouve un objet qui commence par B en anglais !'],
+['Count backwards from ten to zero!','Compte à rebours de dix à zéro !'],
+['Make a funny face and say cheese!','Fais une grimace et dis cheese !'],
+['Find something older than you!','Trouve quelque chose de plus vieux que toi !'],
+['Spell your name in English!','Épelle ton prénom en anglais !'],
+['Find something green in the garden or on the balcony!','Trouve quelque chose de vert dehors !'],
+['Give a high five to everyone and say: Great job!','Tape dans la main de tout le monde : Great job!'],
+['Say three things you can see right now!','Dis trois choses que tu vois maintenant !'],
+['Pretend to be a lion for ten seconds!','Fais le lion pendant dix secondes !'],
+['Find two things that are the same colour!','Trouve deux objets de la même couleur !'],
+['Say what the weather is like today!','Dis quel temps il fait aujourd’hui !'],
+['Bring something you wear on your feet!','Apporte quelque chose qu’on met aux pieds !'],
+['Teach Mum or Dad a new English word!','Apprends un nouveau mot anglais à un parent !']
+];
+var WYR=[
+['be a cat','be a dog','être un chat / être un chien'],
+['eat pizza every day','eat ice cream every day','manger de la pizza / de la glace tous les jours'],
+['fly like a bird','swim like a fish','voler comme un oiseau / nager comme un poisson'],
+['live in a castle','live in a treehouse','vivre dans un château / une cabane dans un arbre'],
+['be invisible','be super strong','être invisible / super fort'],
+['have a pet dragon','have a pet unicorn','avoir un dragon / une licorne'],
+['go to the beach','go to the mountains','aller à la plage / à la montagne'],
+['be a teacher','be a doctor','être prof / médecin'],
+['play football','play video games','jouer au foot / aux jeux vidéo'],
+['live on the moon','live under the sea','vivre sur la lune / sous la mer'],
+['have no homework','have no vegetables','plus de devoirs / plus de légumes'],
+['be very tall','be very small','être très grand / très petit'],
+['talk to animals','speak every language','parler aux animaux / toutes les langues'],
+['eat chocolate','eat sweets','manger du chocolat / des bonbons'],
+['be a pirate','be a ninja','être un pirate / un ninja'],
+['have summer all year','have winter all year','l’été toute l’année / l’hiver toute l’année'],
+['ride a horse','ride an elephant','monter à cheval / sur un éléphant'],
+['be a famous singer','be a famous footballer','chanteur célèbre / footballeur célèbre'],
+['have a robot','have a time machine','avoir un robot / une machine à remonter le temps'],
+['read a book','watch a film','lire un livre / regarder un film'],
+['wake up early','go to bed late','se lever tôt / se coucher tard'],
+['be a superhero','be a wizard','être un super-héros / un magicien'],
+['eat spaghetti with your hands','eat soup with a fork','manger des spaghettis avec les mains / la soupe avec une fourchette'],
+['have a big family','have a big house','une grande famille / une grande maison'],
+['travel by plane','travel by boat','voyager en avion / en bateau'],
+['be a lion','be an eagle','être un lion / un aigle'],
+['live in the city','live in the countryside','vivre en ville / à la campagne'],
+['never be tired','never be hungry','ne jamais être fatigué / ne jamais avoir faim'],
+['meet a dinosaur','meet an alien','rencontrer un dinosaure / un extraterrestre'],
+['sing in front of your class','dance in front of your class','chanter / danser devant ta classe']
+];
+var spyTimer=null;
+function stopSpyTimer(){if(spyTimer){clearInterval(spyTimer);spyTimer=null}}
 var REAL=[
 {t:'Simon says',a:'dès 3 ans',d:'On fait le geste seulement si la consigne commence par « Simon says ».',p:['Simon says touch your nose!','Clap your hands!']},
 {t:'I spy',a:'dès 3 ans',d:'On choisit un objet de la pièce et on donne sa couleur. Les autres devinent.',p:['I spy with my little eye something blue!']},
@@ -240,6 +306,8 @@ function rGames(){
     h+='<button class="game-tile" data-act="g-memory" data-mode="pic"><span class="ic" style="background:#E8EEF8">🃏</span><span><b>Memory images</b><span>Retrouver les paires · dès 3 ans</span></span></button>';
     h+='<button class="game-tile" data-act="g-memory" data-mode="word"><span class="ic" style="background:#E8EEF8">🔤</span><span><b>Memory image + mot</b><span>Associer l’image au mot écrit · CM1</span></span></button>';
     h+='<button class="game-tile" data-act="g-missing"><span class="ic" style="background:#EAF5F3">🙈</span><span><b>What’s missing?</b><span>Quelle image a disparu ? · tout le monde</span></span></button>';
+    h+='<button class="game-tile" data-act="g-spy"><span class="ic" style="background:#FBE9E3">🕵️</span><span><b>Spy missions</b><span>Tirer une mission en anglais et la réussir à temps · CM1</span></span></button>';
+    h+='<button class="game-tile" data-act="g-wyr"><span class="ic" style="background:#EAF5F3">🤔</span><span><b>Would you rather…?</b><span>Choisir et répondre « I\u2019d rather… because… » · CM1 + parents</span></span></button>';
     h+='<button class="game-tile" data-act="g-listen"><span class="ic" style="background:#FFF4D6">👂</span><span><b>Listen &amp; find</b><span>'+(hasAudio()?'Écouter le mot et toucher la bonne image':'Lire le mot et toucher la bonne image')+'</span></span></button>';
     h+='</div><h2 style="font-size:24px;margin-top:6px">Jeux en vrai</h2><div class="stack">';
     REAL.forEach(function(g){h+='<details><summary>'+esc(g.t)+'&nbsp;<span class="label" style="font-family:Nunito">· '+esc(g.a)+'</span></summary><p style="margin:0 0 10px;font-size:15px;line-height:1.45">'+esc(g.d)+'</p><div class="stack">'+g.p.map(function(x){return phraseBtn([x])}).join('')+'</div></details>'});
@@ -271,6 +339,25 @@ function rGames(){
     }
     return h3;
   }
+  if(G.kind==='spy'){
+    var m=MISSIONS[G.deck[G.i]],cur=S.people[G.turn%S.people.length];
+    var h5=back.replace('<span class="label">'+esc(THEMES[viewTheme].en)+'</span>','<span class="label">Mission '+(G.done+G.skip+1)+'</span>')+'<h2 style="font-size:24px">Spy missions 🕵️</h2>';
+    h5+='<div class="card" style="border-color:'+cur.color+'"><div class="label">Agent en mission</div><div class="fred" style="font-size:26px;color:'+cur.color+'">'+esc(cur.name)+'</div></div>';
+    h5+='<div class="card c-coral" style="text-align:center"><div class="label" style="margin-bottom:8px">Your mission</div><div class="big-prompt">'+esc(m[0])+'</div>'+(G.fr?'<p class="muted" style="font-weight:700;margin:8px 0 0">'+esc(m[1])+'</p>':'')+'<div class="row" style="justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap">'+(hasAudio()?'<button class="btn sun" data-act="say" data-say="'+esc(m[0])+'">🔊 Écouter</button>':'')+'<button class="btn ghost" data-act="spy-fr">'+(G.fr?'Cacher':'Aide :')+' français</button></div></div>';
+    h5+='<div class="card" style="text-align:center"><div class="total" id="spyclock" style="color:'+(G.left<=10?'var(--coral)':'var(--ink)')+'">'+G.left+'s</div>'+(G.running?'':'<button class="btn blue full" style="margin-top:10px" data-act="spy-go">'+(G.left<60?'Relancer le chrono':'Go! 60 secondes')+'</button>')+'</div>';
+    h5+='<div class="grid2"><button class="btn teal" data-act="spy-ok">Mission accomplished! ✓</button><button class="btn ghost" data-act="spy-skip">Passer</button></div>';
+    h5+='<div class="card"><div class="label" style="margin-bottom:8px">Points des agents</div><div class="stack">'+S.people.map(function(p){return '<div class="row between" style="font-weight:800"><span style="border-left:6px solid '+p.color+';padding-left:8px">'+esc(p.name)+'</span><span>'+(G.pts[p.id]||0)+' 🏅</span></div>'}).join('')+'</div></div>';
+    return h5;
+  }
+  if(G.kind==='wyr'){
+    var q=WYR[G.deck[G.i]];
+    var h6=back.replace('<span class="label">'+esc(THEMES[viewTheme].en)+'</span>','<span class="label">Question '+(G.n+1)+'</span>')+'<h2 style="font-size:24px">Would you rather…? 🤔</h2>';
+    h6+='<div class="card c-teal" style="text-align:center"><div class="big-prompt">Would you rather '+esc(q[0])+' or '+esc(q[1])+'?</div>'+(G.fr?'<p class="muted" style="font-weight:700;margin:8px 0 0">Tu préfères : '+esc(q[2])+' ?</p>':'')+'<div class="row" style="justify-content:center;gap:8px;margin-top:12px;flex-wrap:wrap">'+(hasAudio()?'<button class="btn sun" data-act="say" data-say="'+esc('Would you rather '+q[0]+' or '+q[1]+'?')+'">🔊 Écouter</button>':'')+'<button class="btn ghost" data-act="wyr-fr">'+(G.fr?'Cacher':'Aide :')+' français</button></div></div>';
+    h6+='<div class="grid2">'+[0,1].map(function(k){return '<button class="pic'+(G.pick===k?' ok':'')+'" style="min-height:110px" data-act="wyr-pick" data-k="'+k+'"><span class="w" style="font-size:19px;text-align:center">'+esc(q[k])+'</span></button>'}).join('')+'</div>';
+    if(G.pick!=null)h6+='<div class="card" style="text-align:center"><div class="label">À dire à voix haute</div><div class="big-prompt" style="font-size:22px;margin-top:6px">I\u2019d rather '+esc(q[G.pick])+' because…</div><p class="muted" style="font-weight:700;margin:8px 0 0">Idées : it\u2019s fun · it\u2019s cool · I love… · I don\u2019t like…</p></div>';
+    h6+='<button class="btn teal full" data-act="wyr-next">Next question →</button>';
+    return h6;
+  }
   if(G.kind==='listen'){
     var th=THEMES[viewTheme];var h4=back+'<div class="row between"><h2 style="font-size:24px">Listen &amp; find</h2><span class="label">⭐ '+G.score+'</span></div>';
     var showWord=!hasAudio()||revealWord;
@@ -280,6 +367,7 @@ function rGames(){
   }
   return back;
 }
+function spyNext(){G.i=(G.i+1)%G.deck.length;G.turn++;G.left=60;G.running=false;G.fr=false;render();window.scrollTo(0,0)}
 function missingSentence(it){return 'The '+it.w+' is missing!'}
 function listenSentence(it,th){return th.art?'Show me the '+it.w+'!':'Show me '+it.w+'!'}
 
@@ -340,7 +428,7 @@ function startListen(){var keep=G&&G.kind==='listen'?G.score:0;var pool=shuffle(
 
 // ---------- actions ----------
 var ACT={
-  tab:function(el){var t=el.dataset.tab;if(t!=='jeux')G=null;location.hash=t;render();window.scrollTo(0,0)},
+  tab:function(el){var t=el.dataset.tab;if(t!=='jeux'){stopSpyTimer();G=null}location.hash=t;render();window.scrollTo(0,0)},
   say:function(el){speak(el.dataset.say)},
   daily:function(el){var d=daily();d[el.dataset.k]=!d[el.dataset.k];setDaily(d);render()},
   allstar:function(){if(S.week!==isoWeek(new Date())){location.hash='etoiles';render();return}var ti=todayIdx();S.people.forEach(function(p){S.stars[p.id][ti]=1});persist();speak('Well done, team!');toast('Une étoile pour tout le monde aujourd’hui !')},
@@ -351,7 +439,16 @@ var ACT={
   close:function(){modal=null;render()},
   newweek:function(){var tot=familyTotal();S.history=(S.history||[]).concat([{week:S.week,label:'Semaine '+String(S.week).split('-W')[1],total:tot}]).slice(-10);S.people.forEach(function(p){S.stars[p.id]=[0,0,0,0,0,0,0]});S.week=isoWeek(new Date());persist();render()},
   'confirm-yes':function(){var f=modal&&modal.onYes;modal=null;if(f)f();render()},
-  'g-back':function(){G=null;render()},
+  'g-spy':function(){stopSpyTimer();var pts=G&&G.kind==='spy'?G.pts:{};G={kind:'spy',deck:shuffle(MISSIONS.map(function(_,i){return i})),i:0,turn:0,left:60,running:false,fr:false,pts:pts,done:0,skip:0};render();window.scrollTo(0,0)},
+  'spy-fr':function(){G.fr=!G.fr;render()},
+  'spy-go':function(){if(!G||G.kind!=='spy')return;if(G.left<=0)G.left=60;G.running=true;speak('Go!');render();stopSpyTimer();spyTimer=setInterval(function(){if(!G||G.kind!=='spy'){stopSpyTimer();return}G.left--;var el=document.getElementById('spyclock');if(el){el.textContent=G.left+'s';if(G.left<=10)el.style.color='var(--coral)'}if(G.left<=0){stopSpyTimer();G.running=false;speak('Time is up!');render()}},1000)},
+  'spy-ok':function(){if(!G||G.kind!=='spy')return;stopSpyTimer();var p=S.people[G.turn%S.people.length];G.pts[p.id]=(G.pts[p.id]||0)+1;G.done++;speak('Mission accomplished! Well done, agent!');spyNext()},
+  'spy-skip':function(){if(!G||G.kind!=='spy')return;stopSpyTimer();G.skip++;spyNext()},
+  'g-wyr':function(){G={kind:'wyr',deck:shuffle(WYR.map(function(_,i){return i})),i:0,n:0,pick:null,fr:false};render();window.scrollTo(0,0)},
+  'wyr-fr':function(){G.fr=!G.fr;render()},
+  'wyr-pick':function(el){var k=+el.dataset.k;G.pick=k;speak('I\u2019d rather '+WYR[G.deck[G.i]][k]);render()},
+  'wyr-next':function(){G.i=(G.i+1)%G.deck.length;G.n++;G.pick=null;G.fr=false;render();window.scrollTo(0,0)},
+  'g-back':function(){stopSpyTimer();G=null;render()},
   'g-memory':function(el){startMemory(el.dataset.mode);render();window.scrollTo(0,0)},
   'g-missing':function(){startMissing();render();window.scrollTo(0,0)},
   'g-listen':function(){startListen();render();window.scrollTo(0,0)},
@@ -362,7 +459,7 @@ var ACT={
   'l-reveal':function(){revealWord=!revealWord;render()},
   'l-pick':function(el){if(!G||G.result)return;var w=el.dataset.w;if(w===G.target.w){G.result='ok';G.score++;speak('Yes! Well done!');render();setTimeout(function(){if(G&&G.kind==='listen'){startListen();render()}},1500)}else{if(G.wrong.indexOf(w)<0)G.wrong.push(w);speak('No, try again!');render()}}
 };
-root.addEventListener('click',function(e){var el=e.target.closest('[data-act]');if(!el)return;if(el.tagName==='BUTTON'&&el.type==='submit')return;var f=ACT[el.dataset.act];if(f){e.preventDefault();f(el)}});
+root.addEventListener('click',function(e){var el=e.target.closest('[data-act]');if(!el)return;var f=ACT[el.dataset.act];if(f){e.preventDefault();f(el)}});
 root.addEventListener('submit',function(e){
   e.preventDefault();var f=e.target;if(f.id!=='setform')return;
   S.people.forEach(function(p,i){var v=(f.elements['n'+i].value||'').trim();if(v)p.name=v.slice(0,16)});
@@ -370,7 +467,7 @@ root.addEventListener('submit',function(e){
   S.reward=(f.elements.reward.value||'').trim().slice(0,60);S.named=true;
   modal=null;persist();render();toast('Réglages enregistrés');
 });
-window.addEventListener('hashchange',function(){if(curTab()!=='jeux')G=null;render()});
+window.addEventListener('hashchange',function(){if(curTab()!=='jeux'){stopSpyTimer();G=null}render()});
 render();
 })();
 </script>
