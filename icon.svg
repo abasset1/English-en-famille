@@ -1,1 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" rx="112" fill="#C94F2C"/><path d="M256 92l46 94 104 15-75 73 18 103-93-49-93 49 18-103-75-73 104-15z" fill="#F2B33D"/><text x="256" y="452" text-anchor="middle" font-family="Arial, sans-serif" font-weight="700" font-size="88" fill="#FFFDF7">ABC</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<rect width="512" height="512" fill="#2F5D9E"/>
+<path d="M136 150h240a40 40 0 0 1 40 40v120a40 40 0 0 1-40 40H246l-62 52v-52h-48a40 40 0 0 1-40-40V190a40 40 0 0 1 40-40z" fill="#FFFDF7"/>
+<text x="256" y="292" text-anchor="middle" font-family="DejaVu Sans, Arial, sans-serif" font-weight="700" font-size="112" fill="#C94F2C">Hi!</text>
+<path transform="translate(-22 22)" d="M392 96l15 31 34 5-25 24 6 34-30-16-30 16 6-34-25-24 34-5z" fill="#F2B33D"/>
+</svg>
